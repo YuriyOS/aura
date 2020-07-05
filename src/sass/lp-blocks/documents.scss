@@ -1,0 +1,135 @@
+.documents {
+  padding: 50px 0px;
+}
+
+.documents__slider {
+  max-width: 100%;
+  padding: 0px 4px;
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+}
+
+.documents__slider .slick-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  font-size: 0;
+  width: 17px;
+  height: 36px;
+  border: none;
+  background-color: transparent;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.documents__slider .slick-arrow:focus {
+  outline: none;
+}
+
+.documents__slider .slick-arrow.slick-prev {
+  left: 10px;
+  background: url('/images/plans/arrows/arrow-left.png') 0 0 / 100% no-repeat;
+}
+
+
+
+// .slick-lightbox .slick-arrow {
+//   right: 10px;
+//   background: url('/images/plans/arrows/arrow-right.png') 0 0 / 100% no-repeat;
+// }
+
+
+.documents__item {
+  max-width: 100%;
+
+  @media (min-width: $screen_pc) {
+    width: 390px;
+    max-width: 100%;
+  }
+}
+
+.documents__heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  min-height: 120px;
+}
+
+.documents__heading_bottom {
+  justify-content: flex-start;
+}
+
+.documents__name {
+  margin: 0px;
+  padding: 0px 4px;
+  max-width: 100%;
+  text-align: center;
+  font-family: 'Segoe Print';
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.documents__name_top {
+  margin-bottom: 5px;
+  transform: matrix(
+    0.99486390227843,
+    -0.10122161796438,
+    0.10122161796438,
+    0.99486390227844,
+    0,
+    0
+  );
+}
+
+.documents__arrow_top {
+  margin-bottom: 5px;
+}
+
+.documents__name_bottom {
+  margin-top: 5px;
+  transform: matrix(
+    0.99605047014676,
+    0.08878885583457,
+    -0.08878885583457,
+    0.99605047014677,
+    0,
+    0
+  );
+}
+
+.documents__arrow_bottom {
+  margin-top: 5px;
+}
+
+.documents__scan {
+  padding: 10px 0px;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.documents__img {
+  width: 270px;
+  max-width: 100%;
+}
+
+.doc__link {
+  &:focus {
+    outline: none;
+  }
+}
+
+// .slick-track {
+//   &:focus,
+//   &:active,
+//   &:focus-within {
+//     outline: 0;
+//   }
+// }
+
+.slick-slide {
+  outline: 0;
+}

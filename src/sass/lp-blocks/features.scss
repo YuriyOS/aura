@@ -1,0 +1,192 @@
+// .features {
+//     padding: 30px 0px 0px;
+  
+//     @media (min-width: $screen_pc) {
+//       padding: 50px 0px;  
+//   }
+// }
+
+.features__item {
+    width: 375px;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.features__name-bg {
+    align-self: flex-start;
+    width: 274px;
+    max-width: 100%;
+    min-height: 74px;
+    transform: translateY(50%);
+    background-color: #bbd6db;
+    z-index: 10;
+}
+
+.features__photo {
+    display: inline-block;
+    width: 80%;
+    position: relative;    
+    z-index: 0;
+
+    &::before {
+     content: '';     
+     width: 100%;
+     height: 100%;
+     position: absolute;
+     top: 10px;
+     left: -10px;
+     border: 2px solid $color-secondary;
+     z-index: -1;
+    }
+}
+
+.features__img {
+    display: block;
+    width: 100%;
+    max-width: 282px;
+}
+
+// .features__img {
+//     display: block;
+//     width: 370px;
+//     height: auto;
+//     max-width: 100%;
+
+//     @media (min-width: $screen_tablet) {
+//         width: 300px;
+//         height: 280px;
+//     }
+// }
+
+// .benefits__block {
+//     padding: 30px 10px;
+//     width: 100%;
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+
+//     @media (min-width: $screen_tablet) {
+//         height: 260px;
+//     }
+
+//     @media (min-width: $screen_pc) {
+//         padding: 60px 30px 60px 50px;
+//         height: 320px;
+//     }
+// }
+
+// .benefits__heading {
+//     @media (min-width: $screen_pc) {
+//         text-align: left;
+//     }
+// }
+// .benefits__heading_margin {
+//     @media (min-width: $screen_tablet) {
+//         margin-bottom: 10px;
+//     }
+
+// }
+
+// .benefits__item {
+//     margin: 0px 0px 10px;
+//     display: flex;
+
+//     &::before {
+//         content: '';
+//         margin: 12px 12px 0px 0px;
+//         display: block;
+//         flex: 0 0 12px;
+//         height: 4px;
+//         background-color: #e57828;
+//     }
+
+//     @media (min-width: $screen_tablet) {
+//         display: flex;        
+//     }
+// }
+
+// .benefits__item:last-child {
+//     margin-bottom: 0px;
+// }
+
+// .features__item_margin_bottom {
+//     @media (min-width: $screen_tablet) {
+//         margin-bottom: -20px;
+//     }
+
+//     @media (min-width: $screen_pc) {
+//         margin-bottom: -40px;
+//     }
+// }
+
+// .features__img_more-size {
+//     @media (min-width: $screen_tablet) {
+//         width: 300px;
+//         height: 300px;
+//     }
+
+//     @media (min-width: $screen_pc) {
+//         width: 458px;
+//         height: 400px
+//     }
+// }
+
+// @media (min-width: $screen_tablet) {
+
+//     .features__item {
+//         display: flex;        
+//     }
+//     .features__item_row-reverse {
+//         margin-bottom: -20px;
+//         flex-direction: row-reverse;
+//         align-items: center;
+//     }
+
+//     .features__item_row {
+//         margin-bottom: -20px;
+//         flex-direction: row;
+//         align-items: center;
+//     }
+
+//     .features__item_bottom {
+//         flex-direction: row-reverse;
+//         align-items: flex-end;
+//     }
+// }
+
+// @media (min-width: $screen_pc) {
+//     .features__item_row-reverse,
+//     .features__item_row {
+//         margin-bottom: -40px;
+//     }
+
+//     .benefits__heading_margin {
+//         margin-bottom: 30px;
+//     }
+
+//     .features__img_less-size {
+//         width: 458px;
+//         height: 360px;
+//     }
+
+//     .benefits__heading_margin {
+//         margin-bottom: 30px;
+//     }
+
+//     .features__img_less-size {
+//         width: 458px;
+//         height: 360px;
+//     }
+
+//     // .documents__img {
+//     //     width: 300px;
+//     //     height: 300px;
+//     // }
+
+// }
+
+
+
+ 

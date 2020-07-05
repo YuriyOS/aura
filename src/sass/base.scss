@@ -1,0 +1,152 @@
+1html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+// Fonts
+
+
+/* Список общих стилей
+=============================================*/
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+.list {
+  margin: 0px;
+  padding: 0px;
+  list-style-type: none;
+}
+
+.link {
+  text-decoration: none;
+}
+
+$color-primary: #bbd6db;
+$color-secondary: #ff9a00;
+
+.container {
+    margin: 0 auto;
+    padding: 0px 10px 0px 10px;
+    width: 100%;
+    max-width: 100%;
+
+    @media (min-width: 768px) {
+      margin: 0 auto;
+    padding: 0px 10px 0px 10px;
+    // width: 375px;
+    max-width: 100%;
+      width: 768px;
+    }
+
+    @media (min-width: 1140px) {
+      width: 1140px;
+    }
+}
+
+
+// Font Sizes
+
+// font-family: 'Raleway', sans-serif;
+// Regular - 400, Bold - 700
+// font-family: 'Roboto', sans-serif;
+// Black - 900
+
+.main-text {
+  margin: 0px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+
+  @media (min-width: 1140px) {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
+.main-text_big {
+  margin: 0px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 20px;
+  line-height: 24px;
+
+  @media (min-width: 1140px) {
+    font-size: 28px;
+    line-height: 34px;
+  }
+}
+
+.h1,
+.h2,
+.h3,
+.h4 {
+  margin: 0px;
+  // padding: 0px;
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+}
+
+.h1 {
+  font-size: 30px;
+  line-height: 36px;
+}
+.h2 {
+  font-size: 30px;
+  line-height: 36px;
+  color: #bbd6db;
+
+  @media (min-width: 1140px) {
+    font-size: 34px;
+    line-height: 40px;
+  }
+}
+
+.h2_margin_bottom {
+  margin-bottom: 30px;
+  @media (min-width: 1140px) {
+    margin-bottom: 50px;
+  }
+}
+
+.h3 {
+  font-size: 20px;
+  line-height: 24px;
+
+  @media (min-width: 1140px) {
+    font-size: 24px;
+    line-height: 28px;
+  }
+}
+
+.h4 {
+  font-size: 20px;
+  line-height: 24px;
+
+  @media (min-width: 1140px) {
+    font-size: 28px;
+    line-height: 34px;
+  }
+}
+
+.bg-1 {
+  background-color: #fef3ea;
+}
+
+.bg-2 {
+  background-color: #e6f4e3;
+}
+

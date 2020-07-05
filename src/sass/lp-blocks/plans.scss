@@ -1,0 +1,235 @@
+.plans__title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+  color: #ffffff;
+  background-color: #262626;
+
+  @media (min-width: $screen_pc) {
+    height: 200px;
+  }
+}
+
+.plans__type {
+  @media (min-width: $screen_pc) {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.plans__visual {
+  width: 100%;
+
+  @media (min-width: $screen_pc) {
+    width: 40%;
+  }
+}
+
+.plans__heading {
+  width: 100%;
+  display: flex;
+
+  font-family: 'Solomon Semi Bold';
+  font-size: 18px;
+  color: #ffffff;
+
+  @media (min-width: $screen_pc) {
+    font-size: 22px;
+  }
+}
+
+.plans__caption,
+.plans__area {
+  margin: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.plans__caption {
+  padding: 0px 10px;
+  width: 80%;
+  height: 60px;
+  background-color: #000000;
+}
+
+.plans__area {
+  width: 20%;
+  height: 60px;
+
+  background-color: #e57828;
+}
+
+.plans__slider {
+  width: 100%;
+}
+
+.plans__img {
+  width: 100%;
+}
+
+.plans__info {
+  padding: 20px 0px;
+
+  @media (min-width: $screen_tablet) {
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  @media (min-width: $screen_pc) {
+    padding: 0px;
+    width: 60%;
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+.div-test {
+  margin: 0 auto;
+  padding: 0px 14px;
+  width: 470px;
+  max-width: 100%;
+
+  @media (min-width: $screen_tablet) {
+    padding: 0px;
+    width: 50%;
+  }
+
+  @media (min-width: $screen_pc) {
+    margin: 0px;
+    padding: 0px;
+    width: 40%;
+    max-width: 100%;
+
+    display: flex;
+    align-items: center;
+  }
+
+}
+
+.drawing__img {
+  margin-bottom: 14px;
+  width: 100%;
+
+  @media (min-width: $screen_pc) {
+    width: 100%;
+  }
+}
+
+.parameters {
+  margin: 0 auto;
+  width: 300px;
+
+  @media (min-width: $screen_pc) {
+    margin: 0;
+    width: 40%;
+  }
+
+}
+
+.parameters__heading {
+  margin-bottom: 14px;
+
+  @media (min-width: $screen_pc) {
+    margin-bottom: 6%;
+  }
+}
+
+.parameters__item {
+  margin-bottom: 14px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+
+  @media (min-width: $screen_pc) {
+    margin: 0 auto 5%;
+    width: 80%;
+  }
+}
+
+.parameters__item:last-child {
+  margin-bottom: 0px;
+}
+
+.parameters__list {
+  margin-bottom: 6%;
+
+  @media (min-width: $screen_pc) {
+    margin-bottom: 38px;
+  }
+}
+
+.parameters__name,
+.parameters__value {
+  margin: 0px;
+}
+
+.parameters__btn {
+  margin: 0 auto;
+}
+
+.plans_dots-style {
+  padding: 0px;
+  width: 66px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0px;
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+
+.plans_dots-style button {
+  width: 11px;
+  height: 11px;
+  font-size: 0px;
+  border: none;
+  border-radius: 50%;
+  background-color: #d7d7d7;
+  outline: none;
+}
+
+.plans_dots-style li[class='slick-active'] button {
+  background: #e57828;
+}
+
+/* Стилизация стрелок */
+
+.photo__slider .slick-arrow,
+.plans__slider .slick-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  font-size: 0;
+  width: 17px;
+  height: 36px;
+  border: none;
+  background-color: transparent;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.photo__slider .slick-arrow.slick-prev,
+.plans__slider .slick-arrow.slick-prev {
+  left: 10px;
+  background: url('/images/plans/arrows/arrow-left.png') 0 0 / 100% no-repeat;
+
+  @media (min-width: $screen_tablet) {
+    left: 30px;
+  }
+}
+
+.photo__slider .slick-arrow.slick-next,
+.plans__slider .slick-arrow.slick-next {
+  right: 10px;
+  background: url('/images/plans/arrows/arrow-right.png') 0 0 / 100% no-repeat;
+
+  @media (min-width: $screen_tablet) {
+    right: 30px;
+  }
+}

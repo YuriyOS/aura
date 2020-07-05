@@ -1,0 +1,26 @@
+/*
+ * Все паршалы импортировать в этот файл
+ */
+
+@import 'normalize.scss';
+@import 'base.scss';
+@import '../../node_modules/slick-carousel/slick/slick.scss';
+@import '../../node_modules/slick-lightbox/dist/slick-lightbox';
+
+@import 'variables.scss';
+
+@import 'lp-blocks/header.scss';
+@import 'lp-blocks/intro';
+@import 'lp-blocks/benefits.scss';
+@import 'lp-blocks/intrduction';
+@import 'lp-blocks/photo';
+
+// @import 'lp-blocks/for-whom';
+@import 'lp-blocks/features';
+// @import 'lp-blocks/plans';
+// @import 'lp-blocks/tech.scss';
+// @import 'lp-blocks/documents.scss';
+// @import 'lp-blocks/modal';
+
+
+

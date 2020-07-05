@@ -1,0 +1,40 @@
+
+.introduction {
+    padding: 15px 0px;   
+}
+
+.mission__text {
+    padding-bottom: 20px;
+    background-image: url(/images/mission-bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+}
+
+.introduction__title {
+    margin-bottom: 15px;
+}
+
+.introduction__text {
+    margin: 0px 0px 15px;
+    text-align: center;
+    font-size: 18px; 
+}
+
+.introduction__text_mb {
+    margin-bottom: 0px;
+}
+
+.introduction__text_bold {
+    font-weight: 700;
+}
+
+.action-text {
+    margin: 0px -10px;
+    padding: 15px 0px;
+    text-align: center;
+    line-height: 24px;
+    font-weight: 700;
+    color: #ffffff;
+    background-color: #ff9a00;
+}

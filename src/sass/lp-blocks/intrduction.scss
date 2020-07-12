@@ -1,10 +1,14 @@
 
 .introduction {
-    padding: 15px 0px;   
+    // padding: 0px 0px 25px;
+
+  @media (min-width: $screen-tablet) {
+    padding: 50px 0px 0px;  
+}
 }
 
 .mission__text {
-    padding-bottom: 20px;
+    padding-bottom: 100px;
     background-image: url(/images/mission-bg.jpg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -12,11 +16,11 @@
 }
 
 .introduction__title {
-    margin-bottom: 15px;
+    margin-bottom: 25px;
 }
 
 .introduction__text {
-    margin: 0px 0px 15px;
+    margin: 0px 0px 25px;
     text-align: center;
     font-size: 18px; 
 }
@@ -26,11 +30,11 @@
 }
 
 .introduction__text_bold {
+    display: block;
     font-weight: 700;
 }
 
 .action-text {
-    margin: 0px -10px;
     padding: 15px 0px;
     text-align: center;
     line-height: 24px;

@@ -37,24 +37,68 @@ body {
 $color-primary: #bbd6db;
 $color-secondary: #ff9a00;
 
+$screen-tablet: 768px;
+$screen-pc: 1140px;
+
+// .container {
+//     margin: 0 auto;
+//     padding: 0px 10px 0px 10px;
+//     width: 100%;
+//     max-width: 1200px;
+
+//     // @media (min-width: 768px) {
+//     //   margin: 0 auto;
+//     // padding: 0px 10px 0px 10px;
+//     // // width: 375px;
+//     // max-width: 100%;
+//     //   width: 768px;
+//     // }
+
+//     // @media (min-width: 1140px) {
+//     //   width: 1140px;
+//     // }
+// }
+
+// Test Container 
 .container {
-    margin: 0 auto;
-    padding: 0px 10px 0px 10px;
-    width: 100%;
-    max-width: 100%;
-
-    @media (min-width: 768px) {
-      margin: 0 auto;
-    padding: 0px 10px 0px 10px;
-    // width: 375px;
-    max-width: 100%;
-      width: 768px;
-    }
-
-    @media (min-width: 1140px) {
-      width: 1140px;
-    }
+  padding: 0px 10px;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
 }
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 748px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+  }
+}
+
+// End Test Container
+
 
 
 // Font Sizes
@@ -91,10 +135,11 @@ $color-secondary: #ff9a00;
 
 .h1,
 .h2,
-.h3,
+// .h3,
 .h4 {
   margin: 0px;
   // padding: 0px;
+  text-transform: uppercase;
   text-align: center;
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
@@ -123,6 +168,9 @@ $color-secondary: #ff9a00;
 }
 
 .h3 {
+  margin: 0px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
   font-size: 20px;
   line-height: 24px;
 

@@ -1,17 +1,40 @@
 .intro {
-  padding: 15px 0px;
+  padding: 25px 0px 0px;
+
+  @media (min-width: $screen-pc) {
+    background-image: url(/images/intro-bg-test.jpg);
+    padding: 50px 0px;
+  }
+
 }
+
+.intrp__wrap {
+
+  @media (min-width: $screen-tablet) {
+    display: flex;  
+    flex-wrap: wrap;
+  }
+  @media (min-width: $screen-pc) {
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+}
+
 
 .intro__box {
   padding: 10px 0px;
   width: calc(100% - 15px);
   background-color: #ff9a00;
+
+  @media (min-width: $screen-pc) {
+width: 60%;
+  }
 }
 
 .intro__img {
   max-width: 100%;
-
-box-shadow: -3px 3px rgba(0, 0, 0, 0.35);  
+  box-shadow: -3px 3px rgba(0, 0, 0, 0.35);  
 }
 
 
@@ -59,12 +82,79 @@ box-shadow: -3px 3px rgba(0, 0, 0, 0.35);
   border-width: 0px 1px 1px 0;
 }
 
-.test {
+.intro__title {
   margin-top: 15px;
   padding-left: 10px;
   text-align: left;
+
+  @media (min-width: $screen-tablet) {
+    text-align: center;
+  }
 }
 
 .color {
   color: #ffffff;
 }
+
+
+
+.benefits__list {
+  padding: 25px 0px 0px 0px;
+
+@media (min-width: $screen-tablet) {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;  
+}
+
+@media (min-width: $screen-pc) {
+  display: block;
+}
+}
+
+.benefits__item {
+  margin: 0 auto 25px;
+  display: flex;
+  width: 345px;
+  max-width: 100%;
+
+}
+
+
+.benefits__icon {
+  width: 94px;
+  max-width: 100%;
+  height: 60px;
+  background-color: $color-primary;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.icon-1{
+  background-image: url(/images/icons/benefits/property.png);
+}
+
+.icon-2 {
+  background-image: url(/images/icons/benefits/house.png);
+}
+
+.icon-3 {
+  background-image: url(/images/icons/benefits/security.png);
+}
+
+.icon-4 {
+  background-image: url(/images/icons/benefits/money.png);
+}
+
+.benefits__text {
+  margin: 10px 0px 0px -10px;
+  padding: 0px 10px 0px 26px;
+  display: flex;
+  align-items: center;
+  width: 272px;
+  height: 60px;
+  color: #ffff;
+  background-color: #3d3d3d;
+  box-shadow: -2px 2px rgba(0, 0, 0, 0.35);  
+}
+

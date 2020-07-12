@@ -7,10 +7,36 @@
 //# sourceMappingURL=slick-lightbox.min.js.map
 $(function () {
   $('.plans__slider').slick({
-    //   setting-name: setting-value
     arrows: true,
     dots: true,
-    dotsClass: 'plans_dots-style'
+    dotsClass: 'plans_dots-style',
+    responsive: [//   {
+    //     breakpoint: 10000,
+    //     settings: "unslick"
+    // },
+    {
+      breakpoint: 10000,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        infinite: true // dots: true
+
+      }
+    }, {
+      breakpoint: 1144,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        infinite: true // dots: true
+
+      }
+    }, {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }]
   });
   $('.documents__slider').slick({
     arrows: true,

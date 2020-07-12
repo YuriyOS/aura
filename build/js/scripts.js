@@ -74,7 +74,7 @@ $(function () {
     arrows: true,
     dots: false,
     adaptiveHeight: true,
-    dotsClass: 'plans_dots-style',
+    dotsClass: 'photo_dots-style',
     // settings: "unslick",
     // slidesToShow: 6,
     // slidesToScroll: 6,
@@ -84,11 +84,17 @@ $(function () {
     }, {
       breakpoint: 1144,
       settings: {
-        slidesToShow: 1,
+        slidesToShow: 2,
         slidesToScroll: 1,
         infinite: true,
         dots: true,
         arrows: true
+      }
+    }, {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
       }
     }]
   });

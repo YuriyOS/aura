@@ -1,44 +1,77 @@
 .plans {
-
-  padding: 30px 0px 100px;
+  padding: 30px 0px;
+  background-image: url(/images/plans-bg.png);
+  border-bottom: 10px solid $color-secondary;
 
   @media (min-width: $screen-pc) {
     padding: 50px 0px;
+  }
 }
+
+.plans__title {
+  margin-bottom: 30px;
+  color: #ffffff;
+
+  @media (min-width: $screen-pc) {
+    margin-bottom: 50px;
+  }
 }
 
 .plans__slider {
   margin: 0 auto;
-  // width: 375px;
+  width: 375px;
+  padding-bottom: 20px;
   max-width: 100%;
+
+  @media (min-width: $screen-tablet) {
+    width: 1000px;
+  }
 }
 
 .plans__item {
   padding: 0px 10px;
   width: 375px;
   max-width: 100%;
+  // display: block;
+
+  @media (min-width: $screen-pc) {
+    width: 100%;
+    // display: flex;
+  }
+}
+
+.plans__slider .slick-slide {
+  display: block;
+
+  @media (min-width: $screen-tablet) {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .plans__drawing {
   width: 375px;
   max-width: 100%;
-  min-height: 400px;
+  // min-height: 400px;
   display: flex;
   align-items: center;
   justify-content: center;
 
-  // border-top: 2px solid $color-secondary;
-  background-color: #3d3d3d;
-  background-image: url(/images/plans/dots-top-right.png), url(/images/plans/dots-down-left.png);
-  background-position: top right, bottom left;
-  background-repeat: no-repeat;
+  // background-color: #3d3d3d;
+  // background-image: url(/images/plans/dots-top-right.png),
+  //   url(/images/plans/dots-down-left.png);
+  // background-position: top right, bottom left;
+  // background-repeat: no-repeat;
 
+  @media (min-width: $screen-tablet) {
+    width: 50%;
+    height: auto;
+  }
 }
 
 .plans__img {
   margin: 0 auto;
   display: block;
-  // width: 355px;
   width: 95%;
   max-width: 100%;
   border: 1px solid #ffffff;
@@ -46,39 +79,23 @@
 
 .parameters {
   padding: 20px 20px;
-
   width: 375px;
   max-width: 100%;
-  // border-top: 2px solid $color-secondary;
 
-  // border-bottom: 2px solid $color-secondary;
-  // background-color: $color_primary;
-
-  background-color: #3d3d3d;
-
-  &::after {
-    content: '';
-    margin-bottom: 15px;
-    display: block;
-    width: 220px;
-    height: 2px;
-    position: absolute;
-    bottom: 0;
-   background-color: $color-secondary; 
+  @media (min-width: $screen-tablet) {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    // justify-content: center;
+    justify-content: flex-start;
   }
-
 }
 
 .parameters__item {
-  // padding: 0px 10px;
   margin-bottom: 15px;
   display: flex;
   justify-content: space-between;
   color: #ffffff;
-
-  // &:last-child {
-  //   margin-bottom: 0px;
-  // }
 }
 
 .parameters__name,
@@ -86,25 +103,31 @@
   margin: 0px;
 }
 
-
 .plans_dots-style {
-  padding: 0px;
-  width: 100px;
+  padding: 0px 30px;
+  width: 375px;
+  max-width: 100%;
   position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: -50px;
+  // transform: translateX(-50%);
+  bottom: 0px;
   display: flex;
   justify-content: space-between;
   list-style: none;
+
+  @media (min-width: $screen-tablet) {
+    padding-left: 20px;
+    width: 50%;
+    right: 0;
+    // left: calc(50% + 20px);
+  }
 }
 
 .plans_dots-style button {
-  width: 11px;
-  height: 11px;
+  width: 5px;
+  height: 5px;
   font-size: 0px;
   border: none;
-  border-radius: 50%;
+  // border-radius: 50%;
   background-color: #d7d7d7;
   outline: none;
 }
@@ -118,39 +141,85 @@
 // .photo__slider .slick-arrow,
 .plans__slider .slick-arrow {
   position: absolute;
-  // top: 50%;
-  bottom: -80px;
+  margin-right: 30px;
+  bottom: 20px;
   transform: translateY(-50%);
   z-index: 2;
   font-size: 0;
-  width: 17px;
-  height: 36px;
+  width: 32px;
+  height: 32px;
   border: none;
   background-color: transparent;
   background-position: center;
   background-repeat: no-repeat;
 }
 
-.photo__slider .slick-arrow.slick-prev,
+// .photo__slider .slick-arrow.slick-prev,
+
 .plans__slider .slick-arrow.slick-prev {
-  left: 50px;
+  right: 50px;
   background: url('/images/plans/arrows/arrow-left.png') 0 0 / 100% no-repeat;
 
   @media (min-width: $screen_tablet) {
-    left: 30%;
+    right: 50px;
   }
 }
 
-.photo__slider .slick-arrow.slick-next,
+// .photo__slider .slick-arrow.slick-next,
 .plans__slider .slick-arrow.slick-next {
-  right: 50px;
+  right: 0px;
   background: url('/images/plans/arrows/arrow-right.png') 0 0 / 100% no-repeat;
 
   @media (min-width: $screen_tablet) {
-    right: 30%;
+    // right: 30%;
+    right: 0;
   }
 }
 
+.flat__text {
+  text-align: center;
+}
+
+.flat__line {
+  display: block;
+  margin: 10px auto;
+}
+.flat__text_bold {
+  margin-bottom: 30px;
+  font-weight: 700;
+
+  @media (min-width: $screen_tablet) {
+  margin-bottom: 50px;
+  }
+}
+
+.falat__list {
+  list-style-type: square;
+}
+
+.flat__img {
+  max-width: 100%;
+}
+
+.flat__content {
+  @media (min-width: $screen_tablet) {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
+
+.flat__list {
+  @media (min-width: $screen_tablet) {
+    width: 50%;
+  }
+}
+
+.flat__img {
+  @media (min-width: $screen_tablet) {
+    width: 50%;
+  }
+}
 
 // // .plans__title {
 // //   display: flex;

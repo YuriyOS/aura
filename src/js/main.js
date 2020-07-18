@@ -5,25 +5,117 @@
 
   $(function(){
 
+    // Mobile Menu
+    
+  $('.js-menu-btn_open').on('click', function(){
+    $('.navigation').addClass('navigation_visible');
+    $('.navigation__overlay').addClass('navigation__overlay_visible');
+    $('body').addClass('body_fixed');
+  });
+
+  $('.js-menu-btn_hide, .js-navigation__overlay').on('click', function(){
+    $('.navigation').removeClass('navigation_visible');
+    $('.navigation__overlay').removeClass('navigation__overlay_visible');
+    $('body').removeClass('body_fixed');
+  });
+  
+  // Mobile Menu End
+
+  // Site Sliders
+  
+  $('.viewing__slider').slick({
+    arrows: true,
+    dots: false,
+    adaptiveHeight: true,
+   dotsClass: 'viewing_dots-style',
+
+    responsive: [
+      {
+        breakpoint: 10000,
+        settings: "unslick"
+    },
+      {
+        breakpoint: 1144,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true,
+          arrows: true
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true,
+          arrows: true
+        }
+        }
+                          
+    ]
+  
+    
+    });
+
+
+    
     $('.plans__slider').slick({
 
         arrows: true,
         dots: true,
         dotsClass: 'plans_dots-style',
+        // appendDots: $('.parameters'),
 
-        responsive: [
-        //   {
-        //     breakpoint: 10000,
-        //     settings: "unslick"
-        // },
+        responsive: [     
         {
           breakpoint: 10000,
           settings: {
-            slidesToShow: 3,
+            slidesToShow: 1,
             slidesToScroll: 1,
             infinite: true,
             // dots: true
           }
+        },
+
+          {
+            breakpoint: 1144,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              infinite: true,
+              // dots: true
+            }
+          },
+          {
+            breakpoint: 768,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          }                  
+        ]
+        
+        });
+    
+        $('.plans__slider').slickLightbox({
+          itemSelector        : '.plans__link_big-size',
+          navigateByKeyboard  : true
+        });
+
+
+    $('.building__slider').slick({
+
+        arrows: true,
+        dots: true,
+        dotsClass: 'building_dots-style',
+
+        responsive: [   
+          {
+            breakpoint: 10000,
+            settings: "unslick"
         },
 
           {
@@ -87,56 +179,11 @@
           }
         });
 
-        $('.photo__slider').slick({
-          arrows: true,
-          dots: false,
-          adaptiveHeight: true,
-         dotsClass: 'photo_dots-style',
-
-          // settings: "unslick",
-          // slidesToShow: 6,
-          // slidesToScroll: 6,
-  
-          responsive: [
-            {
-              breakpoint: 10000,
-              settings: "unslick"
-          },
-            {
-              breakpoint: 1144,
-              settings: {
-                slidesToShow: 2,
-                slidesToScroll: 1,
-                infinite: true,
-                dots: true,
-                arrows: true
-              }
-            },
-            {
-              breakpoint: 768,
-              settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                infinite: true,
-                dots: true,
-                arrows: true
-              }
-              }
-            }                      
-          ]
-  
-          
-          });     
-
-        $('.photo__slider').slickLightbox({
-          itemSelector        : '.photo__link_big-size',
-          navigateByKeyboard  : true
-        });
         
-        $('.plans__slider').slickLightbox({
-          itemSelector        : '.plans__link_big-size',
-          navigateByKeyboard  : true
-        });
+
+      
+        
+    
 
         function createModal(sTitle = 'Заполните форму') {
           $('body').prepend(
@@ -152,11 +199,11 @@
               '            <input class="input modal__input main-text" type="text" name="Name" placeholder="Ваше имя..." required><br>\n' +
               // '            <input class="input modal__input main-text" type="text" name="E-mail" placeholder="Ваше E-mail..." required><br>\n' +
               '            <input class="input modal__input main-text" type="text" name="Phone" placeholder="Ваш телефон..."><br>\n' +
-              '            <button type="submit" class="form__btn">'+ sTitle +'</button>\n' +
+              '            <button type="submit" class="action-form__btn">'+ sTitle +'</button>\n' +
               '        </form>\n' +
               '        </div>\n' +
               '        <div class="modal__footer">\n' +
-              '        <p class="modal__footnote action__subtext main-text_white">Ваши данные в полной безопасности и никогда не будут переданы 3-м лицам.</p>\n' +
+              '        <p class="modal__footnote main-text_white">Ваші дані в цілковитій безпеці і ніколи НЕ будуть передані 3-м особам.</p>\n' +
               '        </div>\n' +
               '    </div>\n' +
               '</div>',

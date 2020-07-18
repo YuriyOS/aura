@@ -20,7 +20,7 @@
         <div class="container">
           <div class="header__wrap">
       
-            <img src="/images/logo-white.png" alt="" class="logo">
+            <img src="/images/logo-horizontal-white.png" alt="" class="header__logo">
       
             <div class="contacts">
               <ul class="contacts__list list">
@@ -30,10 +30,41 @@
       
             </div>
       
-            <div class="menu__btn js-menu-btn_open">
-              <a href="#" class="hamburger"></a>
+            <div class="header__wrap_btn-style">
+              <div class="header__menu-btn js-menu-btn_open hamburger"></div>
             </div>
       
+            <nav class="navigation">
+      
+            <div class="close-btn navigation__close-btn js-menu-btn_hide"></div>
+      
+              <ul class="navigation__list list">
+                <li class="navigation__item">
+                  <a href="" class="navigation__link link">Місія</a>
+                </li>
+                <li class="navigation__item">
+                  <a href="" class="navigation__link link">Переваги</a>
+      
+                </li>
+                <li class="navigation__item">
+                  <a href="#plans" class="navigation__link link">Квартири</a>            
+                  </li>
+                <li class="navigation__item">
+                  <a href="" class="navigation__link link">Інфраструктура</a>            
+      
+                  </li>
+                <li class="navigation__item">
+                  <a href="" class="navigation__link link">Будівництво</a>            
+                </li>
+      
+                <li class="navigation__item">
+                  <a href="" class="navigation__link link">Контакти</a>
+                </li>
+              </ul>
+           
+           
+            </nav>          
+          
           </div>
       
         </div>
@@ -127,52 +158,52 @@
     <!-- </div> -->
     </section>
     
-    <section class="photo">
+    <section class="viewing">
       <div class="container">
-      <h2 class="photo__title h2">
+      <h2 class="viewing__title h2">
         НА ПЕРЕГЛЯДІ ВИ ЗМОЖЕТЕ
       </h2>
     
-      <div class="photo__slider">
+      <div class="viewing__slider">
     
-        <div class="photo__item">
+        <div class="viewing__item">
     
-            <img src="/images/view/slide-1.jpg" alt="" class="photo__img" />
+            <img src="/images/view/slide-1.jpg" alt="" class="viewing__img" />
     
-            <div class="photo__caption">
-              <p class="photo__caption-text main-text">Оглянути <br> територію ЖК</p>
+            <div class="viewing__caption">
+              <p class="viewing__caption-text main-text">Оглянути <br> територію ЖК</p>
               
-              <p class="photo__caption-number">1</p>
+              <p class="viewing__caption-number">1</p>
             </div>
         </div>   
-        <div class="photo__item">
+        <div class="viewing__item">
     
-            <img src="/images/view/slide-2.jpg" alt="" class="photo__img" />
+            <img src="/images/view/slide-2.jpg" alt="" class="viewing__img" />
     
-            <div class="photo__caption">
-              <p class="photo__caption-text main-text">Оглянути <br> готову квартиру</p>
+            <div class="viewing__caption">
+              <p class="viewing__caption-text main-text">Оглянути <br> готову квартиру</p>
               
-              <p class="photo__caption-number">2</p>
+              <p class="viewing__caption-number">2</p>
             </div>
         </div>   
-        <div class="photo__item">
+        <div class="viewing__item">
     
-            <img src="/images/view/slide-3.jpg" alt="" class="photo__img" />
+            <img src="/images/view/slide-3.jpg" alt="" class="viewing__img" />
     
-            <div class="photo__caption">
-              <p class="photo__caption-text main-text">Ознайомитися з документацією</p>
+            <div class="viewing__caption">
+              <p class="viewing__caption-text main-text">Ознайомитися з документацією</p>
               
-              <p class="photo__caption-number">3</p>
+              <p class="viewing__caption-number">3</p>
             </div>
         </div>   
-        <div class="photo__item">
+        <div class="viewing__item">
     
-            <img src="/images/view/slide-4.jpg" alt="" class="photo__img" />
+            <img src="/images/view/slide-4.jpg" alt="" class="viewing__img" />
     
-            <div class="photo__caption">
-              <p class="photo__caption-text main-text">Отримати відповіді на всі питання</p>
+            <div class="viewing__caption">
+              <p class="viewing__caption-text main-text">Отримати відповіді на всі питання</p>
               
-              <p class="photo__caption-number">4</p>
+              <p class="viewing__caption-number">4</p>
             </div>
         </div>   
     
@@ -185,12 +216,12 @@
         
         <h2 class="action-firm__title h2">Приходьте на перегляд і подивіться все особисто</h2>
     
-          <button class="action-form__btn h3">Хочу на перегляд</button>
+          <button class="action-form__btn js-action__btn h3" data-form-title='Хочу на перегляд'>Хочу на перегляд</button>
     
         </div>
     </section>
     
-    <section class="features">
+    <section class="features section">
       <div class="container">
         <h2 class="features__title h2">ПЕРЕВАГИ</h2>
     
@@ -241,7 +272,7 @@
           </li>
     
           <li class="features__item">
-            <h3 class="features__name h3">Квартири <br> з власними двориками</h3>
+            <h3 class="features__name h3">Квартири <br> з двориками</h3>
     
             <div class="features__img-wrap">
               <img src="/images/features/dvor.jpg" alt="" class="features__img" />
@@ -263,7 +294,7 @@
     
             
             <p class="features__text main-text">
-              4 маршрута громадського транспорту до метро. Автомобілем обирайте 1 з 3х маршрутів до Києва.
+              4 маршрута до метро. 3 автомобільні шляхи до Києва.
             </p>
     
           </li>
@@ -469,345 +500,702 @@
        
     </section> -->
 
-    <section class="plans">
+    <section class="plans" id="plans">
       <h2 class="plans__title h2">Квартири</h2>
     
-      <div class="plans__heading">
-        <p class="plans__caption">Так может выглядеть Ваша квартира внутри</p>
+      <!-- <div class="plans__heading"> -->
+        <!-- <p class="plans__caption">Так может выглядеть Ваша квартира внутри</p> -->
         <!-- <p class="plans__area">57,7 М²</p> -->
-      </div>
+      <!-- </div> -->
     
       <div class="plans__slider">
     
         <div class="plans__item">
-    
           <div class="plans__drawing">
-          <a href="/images/plans/1.jpg" class="plans__link_big-size">
-            <img src="/images/plans/1.jpg" alt="" class="plans__img" />
-          </a>
+            <a href="/images/plans/1.jpg" class="plans__link_big-size">
+              <img src="/images/plans/1.jpg" alt="" class="plans__img" />
+            </a>
           </div>
     
           <div class="parameters">
             <ul class="parameters__list list">
-              
               <li class="parameters__item main-text">
-                <p class="parameters__name">Коридор/холл</p>
-                <p class="parameters__value">7,1 м²</p>
+                <p class="parameters__name">Коридор</p>
+                <p class="parameters__value">1,65 м²</p>
               </li>
               <li class="parameters__item main-text">
                 <p class="parameters__name">Кухня</p>
-                <p class="parameters__value">24,8 м²</p>
+                <p class="parameters__value">7,20 м²</p>
               </li>
               <li class="parameters__item main-text">
                 <p class="parameters__name">Спальня</p>
-                <p class="parameters__value">17,2 м²</p>
+                <p class="parameters__value">10,05 м²</p>
               </li>
               <li class="parameters__item main-text">
-                <p class="parameters__name">Ванная</p>
-                <p class="parameters__value">4,6 м²</p>
+                <p class="parameters__name">Санвузол</p>
+                <p class="parameters__value">2,8 м²</p>
               </li>
-              <li class="parameters__item main-text">
-                <p class="parameters__name">Туалет</p>
-                <p class="parameters__value">1,6 м²</p>
-              </li>
-              <li class="parameters__item main-text">
-                <p class="parameters__name">Балкон</p>
-                <p class="parameters__value">8 м²</p>
-              </li>
-    
               <li class="parameters__item main-text">
                 <p class="parameters__name">Загальна площа</p>
                 <p class="parameters__value">30,1 м²</p>
               </li>
             </ul>
-    
-            </button>
           </div>
-    
         </div>
     
         <div class="plans__item">
-    
           <div class="plans__drawing">
-    
-          <a href="/images/plans/2.jpg" class="plans__link_big-size">
-            <img src="/images/plans/2.jpg" alt="" class="plans__img" />
-          </a>
-        </div>
+            <a href="/images/plans/2.jpg" class="plans__link_big-size">
+              <img src="/images/plans/2.jpg" alt="" class="plans__img" />
+            </a>
+          </div>
     
           <div class="parameters">
             <ul class="parameters__list list">
-              
               <li class="parameters__item main-text">
-                <p class="parameters__name">Коридор/холл</p>
-                <p class="parameters__value">7,1 м²</p>
+                <p class="parameters__name">Коридор</p>
+                <p class="parameters__value">1,65 м²</p>
               </li>
               <li class="parameters__item main-text">
                 <p class="parameters__name">Кухня</p>
-                <p class="parameters__value">24,8 м²</p>
+                <p class="parameters__value">7,20 м²</p>
               </li>
               <li class="parameters__item main-text">
                 <p class="parameters__name">Спальня</p>
-                <p class="parameters__value">17,2 м²</p>
+                <p class="parameters__value">10,05 м²</p>
               </li>
               <li class="parameters__item main-text">
-                <p class="parameters__name">Ванная</p>
-                <p class="parameters__value">4,6 м²</p>
+                <p class="parameters__name">Санвузол</p>
+                <p class="parameters__value">2,8 м²</p>
               </li>
-              <li class="parameters__item main-text">
-                <p class="parameters__name">Туалет</p>
-                <p class="parameters__value">1,6 м²</p>
-              </li>
-              <li class="parameters__item main-text">
-                <p class="parameters__name">Балкон</p>
-                <p class="parameters__value">8 м²</p>
-              </li>
-    
               <li class="parameters__item main-text">
                 <p class="parameters__name">Загальна площа</p>
                 <p class="parameters__value">30,1 м²</p>
               </li>
             </ul>
-    
           </div>
-    
         </div>
     
         <div class="plans__item">
-    
           <div class="plans__drawing">
-    
-          <a href="/images/plans/3.jpg" class="plans__link_big-size">
-            <img src="/images/plans/3.jpg" alt="" class="plans__img" />
-          </a>
-        </div>
+            <a href="/images/plans/3.jpg" class="plans__link_big-size">
+              <img src="/images/plans/3.jpg" alt="" class="plans__img" />
+            </a>
+          </div>
     
           <div class="parameters">
             <ul class="parameters__list list">
-              
               <li class="parameters__item main-text">
-                <p class="parameters__name">Коридор/холл</p>
-                <p class="parameters__value">7,1 м²</p>
+                <p class="parameters__name">Коридор</p>
+                <p class="parameters__value">1,65 м²</p>
               </li>
               <li class="parameters__item main-text">
                 <p class="parameters__name">Кухня</p>
-                <p class="parameters__value">24,8 м²</p>
+                <p class="parameters__value">7,20 м²</p>
               </li>
               <li class="parameters__item main-text">
                 <p class="parameters__name">Спальня</p>
-                <p class="parameters__value">17,2 м²</p>
+                <p class="parameters__value">10,05 м²</p>
               </li>
               <li class="parameters__item main-text">
-                <p class="parameters__name">Ванная</p>
-                <p class="parameters__value">4,6 м²</p>
+                <p class="parameters__name">Санвузол</p>
+                <p class="parameters__value">2,8 м²</p>
               </li>
-              <li class="parameters__item main-text">
-                <p class="parameters__name">Туалет</p>
-                <p class="parameters__value">1,6 м²</p>
-              </li>
-              <li class="parameters__item main-text">
-                <p class="parameters__name">Балкон</p>
-                <p class="parameters__value">8 м²</p>
-              </li>
-    
               <li class="parameters__item main-text">
                 <p class="parameters__name">Загальна площа</p>
                 <p class="parameters__value">30,1 м²</p>
               </li>
             </ul>
-    
           </div>
-    
         </div>
     
         <div class="plans__item">
-    
           <div class="plans__drawing">
-    
-          <a href="/images/plans/4.jpg" class="plans__link_big-size">
-            <img src="/images/plans/4.jpg" alt="" class="plans__img" />
-          </a>
-        </div>
+            <a href="/images/plans/4.jpg" class="plans__link_big-size">
+              <img src="/images/plans/4.jpg" alt="" class="plans__img" />
+            </a>
+          </div>
     
           <div class="parameters">
             <ul class="parameters__list list">
-              
               <li class="parameters__item main-text">
-                <p class="parameters__name">Коридор/холл</p>
-                <p class="parameters__value">7,1 м²</p>
+                <p class="parameters__name">Коридор</p>
+                <p class="parameters__value">1,65 м²</p>
               </li>
               <li class="parameters__item main-text">
                 <p class="parameters__name">Кухня</p>
-                <p class="parameters__value">24,8 м²</p>
+                <p class="parameters__value">7,20 м²</p>
               </li>
               <li class="parameters__item main-text">
                 <p class="parameters__name">Спальня</p>
-                <p class="parameters__value">17,2 м²</p>
+                <p class="parameters__value">10,05 м²</p>
               </li>
               <li class="parameters__item main-text">
-                <p class="parameters__name">Ванная</p>
-                <p class="parameters__value">4,6 м²</p>
+                <p class="parameters__name">Санвузол</p>
+                <p class="parameters__value">2,8 м²</p>
               </li>
-              <li class="parameters__item main-text">
-                <p class="parameters__name">Туалет</p>
-                <p class="parameters__value">1,6 м²</p>
-              </li>
-              <li class="parameters__item main-text">
-                <p class="parameters__name">Балкон</p>
-                <p class="parameters__value">8 м²</p>
-              </li>
-    
               <li class="parameters__item main-text">
                 <p class="parameters__name">Загальна площа</p>
                 <p class="parameters__value">30,1 м²</p>
               </li>
             </ul>
-    
           </div>
-    
         </div>
     
         <div class="plans__item">
-    
           <div class="plans__drawing">
-    
-          <a href="/images/plans/5.jpg" class="plans__link_big-size">
-            <img src="/images/plans/5.jpg" alt="" class="plans__img" />
-          </a>
-        </div>
+            <a href="/images/plans/5.jpg" class="plans__link_big-size">
+              <img src="/images/plans/5.jpg" alt="" class="plans__img" />
+            </a>
+          </div>
     
           <div class="parameters">
             <ul class="parameters__list list">
-              
               <li class="parameters__item main-text">
-                <p class="parameters__name">Коридор/холл</p>
-                <p class="parameters__value">7,1 м²</p>
+                <p class="parameters__name">Коридор</p>
+                <p class="parameters__value">1,65 м²</p>
               </li>
               <li class="parameters__item main-text">
                 <p class="parameters__name">Кухня</p>
-                <p class="parameters__value">24,8 м²</p>
+                <p class="parameters__value">7,20 м²</p>
               </li>
               <li class="parameters__item main-text">
                 <p class="parameters__name">Спальня</p>
-                <p class="parameters__value">17,2 м²</p>
+                <p class="parameters__value">10,05 м²</p>
               </li>
               <li class="parameters__item main-text">
-                <p class="parameters__name">Ванная</p>
-                <p class="parameters__value">4,6 м²</p>
+                <p class="parameters__name">Санвузол</p>
+                <p class="parameters__value">2,8 м²</p>
               </li>
-              <li class="parameters__item main-text">
-                <p class="parameters__name">Туалет</p>
-                <p class="parameters__value">1,6 м²</p>
-              </li>
-              <li class="parameters__item main-text">
-                <p class="parameters__name">Балкон</p>
-                <p class="parameters__value">8 м²</p>
-              </li>
-    
               <li class="parameters__item main-text">
                 <p class="parameters__name">Загальна площа</p>
                 <p class="parameters__value">30,1 м²</p>
               </li>
             </ul>
-    
           </div>
-    
         </div>
     
         <div class="plans__item">
-    
           <div class="plans__drawing">
-    
-          <a href="/images/plans/1.jpg" class="plans__link_big-size">
-            <img src="/images/plans/1.jpg" alt="" class="plans__img" />
-          </a>
-        </div>
+            <a href="/images/plans/6.jpg" class="plans__link_big-size">
+              <img src="/images/plans/6.jpg" alt="" class="plans__img" />
+            </a>
+          </div>
     
           <div class="parameters">
             <ul class="parameters__list list">
-              
               <li class="parameters__item main-text">
-                <p class="parameters__name">Коридор/холл</p>
-                <p class="parameters__value">7,1 м²</p>
+                <p class="parameters__name">Коридор</p>
+                <p class="parameters__value">1,65 м²</p>
               </li>
               <li class="parameters__item main-text">
                 <p class="parameters__name">Кухня</p>
-                <p class="parameters__value">24,8 м²</p>
+                <p class="parameters__value">7,20 м²</p>
               </li>
               <li class="parameters__item main-text">
                 <p class="parameters__name">Спальня</p>
-                <p class="parameters__value">17,2 м²</p>
+                <p class="parameters__value">10,05 м²</p>
               </li>
               <li class="parameters__item main-text">
-                <p class="parameters__name">Ванная</p>
-                <p class="parameters__value">4,6 м²</p>
+                <p class="parameters__name">Санвузол</p>
+                <p class="parameters__value">2,8 м²</p>
               </li>
-              <li class="parameters__item main-text">
-                <p class="parameters__name">Туалет</p>
-                <p class="parameters__value">1,6 м²</p>
-              </li>
-              <li class="parameters__item main-text">
-                <p class="parameters__name">Балкон</p>
-                <p class="parameters__value">8 м²</p>
-              </li>
-    
               <li class="parameters__item main-text">
                 <p class="parameters__name">Загальна площа</p>
                 <p class="parameters__value">30,1 м²</p>
               </li>
             </ul>
-    
           </div>
-    
         </div>
     
         <div class="plans__item">
-    
           <div class="plans__drawing">
+            <a href="/images/plans/7.jpg" class="plans__link_big-size">
+              <img src="/images/plans/7.jpg" alt="" class="plans__img" />
+            </a>
+          </div>
     
-          <a href="/images/plans/1.jpg" class="plans__link_big-size">
-            <img src="/images/plans/1.jpg" alt="" class="plans__img" />
-          </a>
-        </div>
           <div class="parameters">
             <ul class="parameters__list list">
-              
               <li class="parameters__item main-text">
-                <p class="parameters__name">Коридор/холл</p>
-                <p class="parameters__value">7,1 м²</p>
+                <p class="parameters__name">Коридор</p>
+                <p class="parameters__value">1,65 м²</p>
               </li>
               <li class="parameters__item main-text">
                 <p class="parameters__name">Кухня</p>
-                <p class="parameters__value">24,8 м²</p>
+                <p class="parameters__value">7,20 м²</p>
               </li>
               <li class="parameters__item main-text">
                 <p class="parameters__name">Спальня</p>
-                <p class="parameters__value">17,2 м²</p>
+                <p class="parameters__value">10,05 м²</p>
               </li>
               <li class="parameters__item main-text">
-                <p class="parameters__name">Ванная</p>
-                <p class="parameters__value">4,6 м²</p>
+                <p class="parameters__name">Санвузол</p>
+                <p class="parameters__value">2,8 м²</p>
               </li>
-              <li class="parameters__item main-text">
-                <p class="parameters__name">Туалет</p>
-                <p class="parameters__value">1,6 м²</p>
-              </li>
-              <li class="parameters__item main-text">
-                <p class="parameters__name">Балкон</p>
-                <p class="parameters__value">8 м²</p>
-              </li>
-    
               <li class="parameters__item main-text">
                 <p class="parameters__name">Загальна площа</p>
                 <p class="parameters__value">30,1 м²</p>
               </li>
             </ul>
-    
           </div>
-    
         </div>
     
+        <div class="plans__item">
+          <div class="plans__drawing">
+            <a href="/images/plans/8.jpg" class="plans__link_big-size">
+              <img src="/images/plans/8.jpg" alt="" class="plans__img" />
+            </a>
+          </div>
     
+          <div class="parameters">
+            <ul class="parameters__list list">
+              <li class="parameters__item main-text">
+                <p class="parameters__name">Коридор</p>
+                <p class="parameters__value">1,65 м²</p>
+              </li>
+              <li class="parameters__item main-text">
+                <p class="parameters__name">Кухня</p>
+                <p class="parameters__value">7,20 м²</p>
+              </li>
+              <li class="parameters__item main-text">
+                <p class="parameters__name">Спальня</p>
+                <p class="parameters__value">10,05 м²</p>
+              </li>
+              <li class="parameters__item main-text">
+                <p class="parameters__name">Санвузол</p>
+                <p class="parameters__value">2,8 м²</p>
+              </li>
+              <li class="parameters__item main-text">
+                <p class="parameters__name">Загальна площа</p>
+                <p class="parameters__value">30,1 м²</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+    
+        <div class="plans__item">
+          <div class="plans__drawing">
+            <a href="/images/plans/9.jpg" class="plans__link_big-size">
+              <img src="/images/plans/9.jpg" alt="" class="plans__img" />
+            </a>
+          </div>
+    
+          <div class="parameters">
+            <ul class="parameters__list list">
+              <li class="parameters__item main-text">
+                <p class="parameters__name">Коридор</p>
+                <p class="parameters__value">1,65 м²</p>
+              </li>
+              <li class="parameters__item main-text">
+                <p class="parameters__name">Кухня</p>
+                <p class="parameters__value">7,20 м²</p>
+              </li>
+              <li class="parameters__item main-text">
+                <p class="parameters__name">Спальня</p>
+                <p class="parameters__value">10,05 м²</p>
+              </li>
+              <li class="parameters__item main-text">
+                <p class="parameters__name">Санвузол</p>
+                <p class="parameters__value">2,8 м²</p>
+              </li>
+              <li class="parameters__item main-text">
+                <p class="parameters__name">Загальна площа</p>
+                <p class="parameters__value">30,1 м²</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+    
+        <div class="plans__item">
+          <div class="plans__drawing">
+            <a href="/images/plans/10.jpg" class="plans__link_big-size">
+              <img src="/images/plans/10.jpg" alt="" class="plans__img" />
+            </a>
+          </div>
+    
+          <div class="parameters">
+            <ul class="parameters__list list">
+              <li class="parameters__item main-text">
+                <p class="parameters__name">Коридор</p>
+                <p class="parameters__value">1,65 м²</p>
+              </li>
+              <li class="parameters__item main-text">
+                <p class="parameters__name">Кухня</p>
+                <p class="parameters__value">7,20 м²</p>
+              </li>
+              <li class="parameters__item main-text">
+                <p class="parameters__name">Спальня</p>
+                <p class="parameters__value">10,05 м²</p>
+              </li>
+              <li class="parameters__item main-text">
+                <p class="parameters__name">Санвузол</p>
+                <p class="parameters__value">2,8 м²</p>
+              </li>
+              <li class="parameters__item main-text">
+                <p class="parameters__name">Загальна площа</p>
+                <p class="parameters__value">30,1 м²</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+    
+        <div class="plans__item">
+          <div class="plans__drawing">
+            <a href="/images/plans/11.jpg" class="plans__link_big-size">
+              <img src="/images/plans/11.jpg" alt="" class="plans__img" />
+            </a>
+          </div>
+    
+          <div class="parameters">
+            <ul class="parameters__list list">
+              <li class="parameters__item main-text">
+                <p class="parameters__name">Коридор</p>
+                <p class="parameters__value">1,65 м²</p>
+              </li>
+              <li class="parameters__item main-text">
+                <p class="parameters__name">Кухня</p>
+                <p class="parameters__value">7,20 м²</p>
+              </li>
+              <li class="parameters__item main-text">
+                <p class="parameters__name">Спальня</p>
+                <p class="parameters__value">10,05 м²</p>
+              </li>
+              <li class="parameters__item main-text">
+                <p class="parameters__name">Санвузол</p>
+                <p class="parameters__value">2,8 м²</p>
+              </li>
+              <li class="parameters__item main-text">
+                <p class="parameters__name">Загальна площа</p>
+                <p class="parameters__value">30,1 м²</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+    
+        <div class="plans__item">
+          <div class="plans__drawing">
+            <a href="/images/plans/12.jpg" class="plans__link_big-size">
+              <img src="/images/plans/12.jpg" alt="" class="plans__img" />
+            </a>
+          </div>
+    
+          <div class="parameters">
+            <ul class="parameters__list list">
+              <li class="parameters__item main-text">
+                <p class="parameters__name">Коридор</p>
+                <p class="parameters__value">1,65 м²</p>
+              </li>
+              <li class="parameters__item main-text">
+                <p class="parameters__name">Кухня</p>
+                <p class="parameters__value">7,20 м²</p>
+              </li>
+              <li class="parameters__item main-text">
+                <p class="parameters__name">Спальня</p>
+                <p class="parameters__value">10,05 м²</p>
+              </li>
+              <li class="parameters__item main-text">
+                <p class="parameters__name">Санвузол</p>
+                <p class="parameters__value">2,8 м²</p>
+              </li>
+              <li class="parameters__item main-text">
+                <p class="parameters__name">Загальна площа</p>
+                <p class="parameters__value">30,1 м²</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+    
+        <div class="plans__item">
+          <div class="plans__drawing">
+            <a href="/images/plans/13.jpg" class="plans__link_big-size">
+              <img src="/images/plans/13.jpg" alt="" class="plans__img" />
+            </a>
+          </div>
+    
+          <div class="parameters">
+            <ul class="parameters__list list">
+              <li class="parameters__item main-text">
+                <p class="parameters__name">Коридор</p>
+                <p class="parameters__value">1,65 м²</p>
+              </li>
+              <li class="parameters__item main-text">
+                <p class="parameters__name">Кухня</p>
+                <p class="parameters__value">7,20 м²</p>
+              </li>
+              <li class="parameters__item main-text">
+                <p class="parameters__name">Спальня</p>
+                <p class="parameters__value">10,05 м²</p>
+              </li>
+              <li class="parameters__item main-text">
+                <p class="parameters__name">Санвузол</p>
+                <p class="parameters__value">2,8 м²</p>
+              </li>
+              <li class="parameters__item main-text">
+                <p class="parameters__name">Загальна площа</p>
+                <p class="parameters__value">30,1 м²</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+    
+        <div class="plans__item">
+          <div class="plans__drawing">
+            <a href="/images/plans/14.jpg" class="plans__link_big-size">
+              <img src="/images/plans/14.jpg" alt="" class="plans__img" />
+            </a>
+          </div>
+    
+          <div class="parameters">
+            <ul class="parameters__list list">
+              <li class="parameters__item main-text">
+                <p class="parameters__name">Коридор</p>
+                <p class="parameters__value">1,65 м²</p>
+              </li>
+              <li class="parameters__item main-text">
+                <p class="parameters__name">Кухня</p>
+                <p class="parameters__value">7,20 м²</p>
+              </li>
+              <li class="parameters__item main-text">
+                <p class="parameters__name">Спальня</p>
+                <p class="parameters__value">10,05 м²</p>
+              </li>
+              <li class="parameters__item main-text">
+                <p class="parameters__name">Санвузол</p>
+                <p class="parameters__value">2,8 м²</p>
+              </li>
+              <li class="parameters__item main-text">
+                <p class="parameters__name">Загальна площа</p>
+                <p class="parameters__value">30,1 м²</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+    
+        <div class="plans__item">
+          <div class="plans__drawing">
+            <a href="/images/plans/15.jpg" class="plans__link_big-size">
+              <img src="/images/plans/15.jpg" alt="" class="plans__img" />
+            </a>
+          </div>
+    
+          <div class="parameters">
+            <ul class="parameters__list list">
+              <li class="parameters__item main-text">
+                <p class="parameters__name">Коридор</p>
+                <p class="parameters__value">1,65 м²</p>
+              </li>
+              <li class="parameters__item main-text">
+                <p class="parameters__name">Кухня</p>
+                <p class="parameters__value">7,20 м²</p>
+              </li>
+              <li class="parameters__item main-text">
+                <p class="parameters__name">Спальня</p>
+                <p class="parameters__value">10,05 м²</p>
+              </li>
+              <li class="parameters__item main-text">
+                <p class="parameters__name">Санвузол</p>
+                <p class="parameters__value">2,8 м²</p>
+              </li>
+              <li class="parameters__item main-text">
+                <p class="parameters__name">Загальна площа</p>
+                <p class="parameters__value">30,1 м²</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+    
+        <div class="plans__item">
+          <div class="plans__drawing">
+            <a href="/images/plans/16.jpg" class="plans__link_big-size">
+              <img src="/images/plans/16.jpg" alt="" class="plans__img" />
+            </a>
+          </div>
+    
+          <div class="parameters">
+            <ul class="parameters__list list">
+              <li class="parameters__item main-text">
+                <p class="parameters__name">Коридор</p>
+                <p class="parameters__value">1,65 м²</p>
+              </li>
+              <li class="parameters__item main-text">
+                <p class="parameters__name">Кухня</p>
+                <p class="parameters__value">7,20 м²</p>
+              </li>
+              <li class="parameters__item main-text">
+                <p class="parameters__name">Спальня</p>
+                <p class="parameters__value">10,05 м²</p>
+              </li>
+              <li class="parameters__item main-text">
+                <p class="parameters__name">Санвузол</p>
+                <p class="parameters__value">2,8 м²</p>
+              </li>
+              <li class="parameters__item main-text">
+                <p class="parameters__name">Загальна площа</p>
+                <p class="parameters__value">30,1 м²</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+    
+        <div class="plans__item">
+          <div class="plans__drawing">
+            <a href="/images/plans/17.jpg" class="plans__link_big-size">
+              <img src="/images/plans/17.jpg" alt="" class="plans__img" />
+            </a>
+          </div>
+    
+          <div class="parameters">
+            <ul class="parameters__list list">
+              <li class="parameters__item main-text">
+                <p class="parameters__name">Коридор</p>
+                <p class="parameters__value">1,65 м²</p>
+              </li>
+              <li class="parameters__item main-text">
+                <p class="parameters__name">Кухня</p>
+                <p class="parameters__value">7,20 м²</p>
+              </li>
+              <li class="parameters__item main-text">
+                <p class="parameters__name">Спальня</p>
+                <p class="parameters__value">10,05 м²</p>
+              </li>
+              <li class="parameters__item main-text">
+                <p class="parameters__name">Санвузол</p>
+                <p class="parameters__value">2,8 м²</p>
+              </li>
+              <li class="parameters__item main-text">
+                <p class="parameters__name">Загальна площа</p>
+                <p class="parameters__value">30,1 м²</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+    
+        <div class="plans__item">
+          <div class="plans__drawing">
+            <a href="/images/plans/18.jpg" class="plans__link_big-size">
+              <img src="/images/plans/18.jpg" alt="" class="plans__img" />
+            </a>
+          </div>
+    
+          <div class="parameters">
+            <ul class="parameters__list list">
+              <li class="parameters__item main-text">
+                <p class="parameters__name">Коридор</p>
+                <p class="parameters__value">1,65 м²</p>
+              </li>
+              <li class="parameters__item main-text">
+                <p class="parameters__name">Кухня</p>
+                <p class="parameters__value">7,20 м²</p>
+              </li>
+              <li class="parameters__item main-text">
+                <p class="parameters__name">Спальня</p>
+                <p class="parameters__value">10,05 м²</p>
+              </li>
+              <li class="parameters__item main-text">
+                <p class="parameters__name">Санвузол</p>
+                <p class="parameters__value">2,8 м²</p>
+              </li>
+              <li class="parameters__item main-text">
+                <p class="parameters__name">Загальна площа</p>
+                <p class="parameters__value">30,1 м²</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+    
+        <div class="plans__item">
+          <div class="plans__drawing">
+            <a href="/images/plans/19.jpg" class="plans__link_big-size">
+              <img src="/images/plans/19.jpg" alt="" class="plans__img" />
+            </a>
+          </div>
+    
+          <div class="parameters">
+            <ul class="parameters__list list">
+              <li class="parameters__item main-text">
+                <p class="parameters__name">Коридор</p>
+                <p class="parameters__value">1,65 м²</p>
+              </li>
+              <li class="parameters__item main-text">
+                <p class="parameters__name">Кухня</p>
+                <p class="parameters__value">7,20 м²</p>
+              </li>
+              <li class="parameters__item main-text">
+                <p class="parameters__name">Спальня</p>
+                <p class="parameters__value">10,05 м²</p>
+              </li>
+              <li class="parameters__item main-text">
+                <p class="parameters__name">Санвузол</p>
+                <p class="parameters__value">2,8 м²</p>
+              </li>
+              <li class="parameters__item main-text">
+                <p class="parameters__name">Загальна площа</p>
+                <p class="parameters__value">30,1 м²</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+    
+        <div class="plans__item">
+          <div class="plans__drawing">
+            <a href="/images/plans/20.jpg" class="plans__link_big-size">
+              <img src="/images/plans/20.jpg" alt="" class="plans__img" />
+            </a>
+          </div>
+    
+          <div class="parameters">
+            <ul class="parameters__list list">
+              <li class="parameters__item main-text">
+                <p class="parameters__name">Коридор</p>
+                <p class="parameters__value">1,65 м²</p>
+              </li>
+              <li class="parameters__item main-text">
+                <p class="parameters__name">Кухня</p>
+                <p class="parameters__value">7,20 м²</p>
+              </li>
+              <li class="parameters__item main-text">
+                <p class="parameters__name">Спальня</p>
+                <p class="parameters__value">10,05 м²</p>
+              </li>
+              <li class="parameters__item main-text">
+                <p class="parameters__name">Санвузол</p>
+                <p class="parameters__value">2,8 м²</p>
+              </li>
+              <li class="parameters__item main-text">
+                <p class="parameters__name">Загальна площа</p>
+                <p class="parameters__value">30,1 м²</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+    
+    </section>
+    
+    <section class="flat section">
+      <div class="container">
+      <!-- <h2 class="flat__title h2">Квартири</h2> -->
+    
+      <p class="flat__text main-text">Ми старанно зводимо до мінімуму необхідність доробки та ремонтів і залишаємо покупцям право самим вирішувати яким вони бачать інтер'єр своєї майбутньої квартири.</p>
+    
+      <img src="/images/plans/line.png" alt="" class="flat__line">
+      
+      <p class="flat__text flat__text_bold main-text">Тому квартири в ЖК Aura здаються з:</p>
+      
+      <div class="flat__content">
+        <ul class="falat__list main-text">
+          <li class="flat__item">Example</li>
+          <li class="flat__item">Example</li>
+          <li class="flat__item">Example</li>
+          <li class="flat__item">Example</li>
+          <li class="flat__item">Example</li>
+          <li class="flat__item">Example</li>
+          <li class="flat__item">Example</li>
+          <li class="flat__item">Example</li>
+        </ul>
+    
+        <img src="/images/plans/family.png" alt="" class="flat__img">
+      </div>
       </div>
     </section>
 
@@ -816,7 +1204,7 @@
         
         <h2 class="action-firm__title h2">Приходьте на перегляд і подивіться все особисто</h2>
     
-          <button class="action-form__btn h3">Хочу на перегляд</button>
+          <button class="action-form__btn js-action__btn h3" data-form-title='Хочу на перегляд'>Хочу на перегляд</button>
     
         </div>
     </section>
@@ -827,7 +1215,44 @@
     
             <h2 class="infrastructure__title h2">інфраструктура</h2>
     
-            <div class="infrastructure__list">
+            <ul class="infrastructure__list features__list list">
+                <li class="infrastructure__item features__item">
+                  <h3 class="infrastructure__name h3">Пішки</h3>
+          
+                  <div class="infrastructure__img-wrap">
+                    <img src="/images/infrastructure/man-2.jpg" alt="" class="infrastructure__img features__img" />
+                  </div>
+          
+                  <ul class="infrastructure__content">
+                    <li class="infrastructure__point main-text">Школи №1, №2.</li>
+                    <li class="infrastructure__point main-text">Дитячі державні садки «Берізка», «Джерело».</li>
+                    <li class="infrastructure__point main-text">Спортивна футбольна школа UCSA.</li>
+                    <li class="infrastructure__point main-text">Ринок, стадіон.</li>
+                    <li class="infrastructure__point main-text">Дитяча обласна та районна лікарні.</li>
+                    <li class="infrastructure__point main-text">Торговий центр.</li>
+                </ul>
+                </li>
+    
+                <li class="infrastructure__item features__item">
+                    <h3 class="infrastructure__name h3">Громадським <br> транспортом</h3>
+            
+                    <div class="infrastructure__img-wrap">
+                      <img src="/images/infrastructure/bus-2.png" alt="" class="infrastructure__img features__img" />
+                    </div>
+            
+                    <ul class="infrastructure__content">
+                        <li class="infrastructure__point main-text">№ 825 - <img src="/images/infrastructure/metro-icon.png" alt="" class="metro-icon"> «Палац Україна» </li>
+                        <li class="infrastructure__point main-text">№ 801 - <img src="/images/infrastructure/metro-icon.png" alt="" class="metro-icon"> «Дружби Народів» </li>
+                        <li class="infrastructure__point main-text">№ 368 - <img src="/images/infrastructure/metro-icon.png" alt="" class="metro-icon"> «Вокзальна» </li>
+                        <li class="infrastructure__point main-text">№ 369 - <img src="/images/infrastructure/metro-icon.png" alt="" class="metro-icon"> «Святошин» </li>
+                        <li class="infrastructure__point main-text">№ 720 - Цирк (площа Перемоги)</li>
+                  </ul>
+                  </li>
+    
+            </ul>
+                
+    
+            <!-- <div class="infrastructure__list">
                 <div class="infrastructure__item infrastructure__line_left">
                     <div class="infrastructure__icon infrastructure__icon-man"></div>
     
@@ -854,7 +1279,6 @@
                 <div class="infrastructure__item infrastructure__line_right">
                     <div class="infrastructure__icon infrastructure__icon-bus"></div>
     
-                    <!-- <p class="infrastructure__header main-text">Кінцеві маршрутки до: </p> -->
     
                     <ul class="infrastructure__content">
                         <li class="infrastructure__point main-text">№ 825 - <img src="/images/infrastructure/metro-icon.png" alt="" class="metro-icon"> «Палац Україна» </li>
@@ -866,10 +1290,76 @@
                     </ul>
     
                 </div>
-            </div>
+            </div> -->
         </div>
     </section>
 
+    <section class="building">
+        <div class="container">
+            <h2 class="building__title h2">ХІД БУДІВНИЦТВА</h2>
+    
+            <div class="building__slider">
+                <div class="building__item">
+                    <div class="building__img-wrap">
+                        <img src="/images/building/01.png" alt="" class="building__img">
+                    </div>
+                </div>
+                <div class="building__item">
+                    <div class="building__img-wrap">
+                        <img src="/images/building/01.png" alt="" class="building__img">
+                    </div>
+                </div>
+                <div class="building__item">
+                    <div class="building__img-wrap">
+                        <img src="/images/building/01.png" alt="" class="building__img">
+                    </div>
+                </div>
+                <div class="building__item">
+                    <div class="building__img-wrap">
+                        <img src="/images/building/01.png" alt="" class="building__img">
+                    </div>
+                </div>
+                <div class="building__item">
+                    <div class="building__img-wrap">
+                        <img src="/images/building/01.png" alt="" class="building__img">
+                    </div>
+                </div>
+                <div class="building__item">
+                    <div class="building__img-wrap">
+                        <img src="/images/building/01.png" alt="" class="building__img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="footer section">
+        <div class="container">
+            <div class="footer__wrap">
+            <img src="/images/logo-horizontal-white.png" alt="" class="footer__logo">
+    
+            <div class="footer__contacts contacts">
+                <ul class="contacts__list list">
+                  <li class="contacts__item"><a href="tel:+380983230102" class="contacts__link link">+38 098 323 01 02</a></li>
+                  <li class="contacts__item"><a href="tel:+380983230102" class="contacts__link link">info@aura.house</a></li>
+                </ul>
+            </div>
+    
+            <ul class="footer__social list">
+                <li class="social__item">
+                    <a href="" class="social__link">
+                        <img src="/images/facebook-icon.png" alt="" class="social__icon">
+                    </a>
+                </li>
+                <li class="social__item">
+                    <a href="" class="social__link">
+                        <img src="/images/instagram-icon.png" alt="" class="social__icon">
+                    </a>
+                </li>
+            </ul>
+        </div>
+        </div>
+    </section>
 
     <!-- //='./html/lp-blocks/for-whom.html' -->
 

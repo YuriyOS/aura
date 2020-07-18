@@ -1,9 +1,8 @@
 .header {
-min-height: 60px;
-display: flex;
-justify-content: space-between;
-align-items: center;
-background-color: #3f4342;
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  background-color: #3f4342;
 }
 
 .header__wrap {
@@ -12,30 +11,85 @@ background-color: #3f4342;
   align-items: center;
 }
 
-.logo {
-width: 100px;
+.header__logo {
+  width: 130px;
+  max-width: 100%;
+
+  // @media (min-width: $screen-pc) {
+  //   width: 130px;
+  // }
 }
+
 .contacts {
   padding: 0px 10px;
-  margin-left: auto;  
+  margin-left: auto;
+
+  @media (min-width: $screen-pc) {
+    margin: 0px;
+    order: 3;
+  }
 }
 
 .contacts__list {
   text-align: center;
+
+  @media (min-width: $screen-pc) {
+  }
 }
 
 .contacts__link {
   font-size: 12px;
   color: #ffffff;
-}
-  .menu__btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50px;
-    height: 50px;
-    border: 1px solid #ffffff;
+
+  @media (min-width: $screen-tablet) {
+    font-size: 18px;
   }
+}
+
+.header__wrap_btn-style {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 0 0 45px;
+  height: 45px;
+  border: 1px solid #ffffff;
+
+  @media (min-width: $screen-pc) {
+    display: none;
+  }
+}
+
+.header__menu-btn {
+  padding: 0px;
+  display: block;
+  width: 60px;
+  height: 60px;
+}
+
+.close-btn {
+  display: block;
+  width: 20px;
+  height: 3px;
+  position: relative;
+  transform: rotate(-45deg);
+  background-color: #ffffff;
+
+  &::before {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 3px;
+    position: absolute;
+    transform: rotate(-90deg);
+    background-color: #ffffff;
+  }
+}
+
+.navigation__close-btn {
+  position: absolute;
+  top: 26px;
+  right: 16px;
+}
 
 .hamburger {
   display: block;
@@ -63,4 +117,70 @@ width: 100px;
   width: 100%;
   height: 4px;
   background-color: #ffffff;
+}
+
+// Menu Button End ==========================
+
+.navigation {
+  overflow-y: auto;
+  width: 100%;
+  height: 60px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  transform: translateX(-100%);
+  // background-color: #538dcc;
+  transition: transform 0.3s ease;
+
+  @media (min-width: $screen-pc) {
+    width: 50%;
+    // display: flex;
+    // justify-content: space-between;
+    // display: block;
+    // width: 100%;
+    position: relative;
+    // position: unset;
+    // bottom: auto;
+    transform: translateX(0%);
+  }
+}
+
+.navigation_visible {
+  padding: 50px;
+  height: 100%;
+  transform: translateX(0);
+  transition: transform 0.3s ease;
+  border: 1px solid #ffffff;
+  // background-color: #3f4342;
+  background-color: rgba(63, 67, 66, 0.9);
+  box-shadow: 0px 3px 5px 0px rgba(1, 1, 1, 0.5);
+  z-index: 10;
+}
+
+.navigation_fixed {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  box-shadow: 0px 3px 5px 0px rgba(1, 1, 1, 0.5);
+}
+
+.close-btn {
+  @media (min-width: $screen-pc) {
+    display: none;
+  }
+}
+.navigation__list {
+  display: block;
+  @media (min-width: $screen-pc) {
+    display: flex;
+    height: 60px;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.navigation__link {
+  color: #ffffff;
 }

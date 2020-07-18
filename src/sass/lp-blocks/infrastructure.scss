@@ -9,122 +9,227 @@
   margin-bottom: 40px;
 }
 
-.infrastructure__list {
-  padding: 0px;
+
+.infrastructure__name {
+  padding: 15px 0px 15px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &::after {
+    content: '';
+    display: block;
+    width: 59px;
+    height: 18px;
+    background-image: url(/images/infrastructure/pointer.png);
+  }
 
   @media (min-width: $screen-tablet) {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
+    &::after {
+    margin-right: 0px;
 
-  @media (min-width: $screen-pc) {
-    justify-content: space-around;
+    }
   }
 }
 
-.infrastructure__item {
-  margin: 50px auto 10px;
-  display: block;
-  width: 355px;
-  max-width: 100%;
-  border: 2px solid transparent;
-  border-image-slice: 1;
-}
+.infrastructure__img-wrap {
+  padding: 15px;
+  position: relative;
+  // margin-bottom: 15px;
 
-.infrastructure__line_left {
-  border-image: linear-gradient(
-    100deg,
-    $color-secondary 0 35%,
-    transparent 35% 100%
-  );
-  border-image-slice: 1;
-}
+  display: inline-block;
 
-.infrastructure__line_right {
-  border-image: linear-gradient(
-    -100deg,
-    $color-secondary 0 35%,
-    transparent 35% 100%
-  );
-  border-image-slice: 1;
-}
 
-.infrastructure__icon {
-  margin: 0 auto;
-  width: 120px;
-  height: 90px;
-  transform: translateY(-50%);
-  background-color: $color-primary;
-  background-position: center;
-  background-repeat: no-repeat;
-  box-shadow: -3px 3px rgba(0, 0, 0, 0.35);
-}
+  &::before {
+    content: '';
+    display: block;
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    top: 0;
+    left: 0;  
+    border-top: 15px solid $color-primary;
+    border-left: 15px solid $color-primary;
+  }
 
-.infrastructure__icon-man {
-  background-image: url(/images/infrastructure/man.png);
-}
+  &::after {
+    content: '';
+    display: block;
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    right: 0;
+    bottom: 0;  
+    border-right: 15px solid $color-primary;
+    border-bottom: 15px solid $color-primary;
+  }
 
-.infrastructure__icon-bus {
-  background-image: url(/images/infrastructure/bus.png);
+  
+  @media (min-width: $screen-tablet) {
+    padding: 8px;
+  
+      &::before {
+        border-top: 8px solid $color-primary;
+        border-left: 8px solid $color-primary;
+      }
+  
+      &::after {
+        border-right: 8px solid $color-primary;
+        border-bottom: 8px solid $color-primary;
+      }
+    }
 }
 
 .infrastructure__content {
-  padding: 0px 0px 10px 30px;
-  margin: -15px 0px 20px 0px;
   list-style-type: square;
-}
 
-.infrastructure__map {
-  margin: 0 -10px;
-  position: relative;
-
-  @media (min-width: $screen-tablet) {
-    order: 3;
-    width: 100%;
-  }
-}
-
-.marker {
-  position: absolute;
-  top: 50px;
-  right: 180px;
-
-  @media (min-width: $screen-tablet) {
-    top: 0px;
-    right: 130px;
-  }
-
-  @media (min-width: $screen-pc) {
-    top: 40px;
-    right: 240px;
-  }
-}
-
-.marker__icon {
-    margin: 0 auto 4px;
+  &::before {
+    content: '';
+    margin-left: -22px;
+    margin-bottom: 20px;
     display: block;
-    width: 30px;
-}
+    width: 194px;
+    height: 20px;
+    background-image: url(/images/infrastructure/line.png);
+  }
 
-.marker__name {
-    font-weight: 700;
-}
+  &::after {
+    content: '';
+    margin-left: -22px;
 
-.infrastructure__img {
-  width: 100%;
-  height: 260px;
-
-  object-fit: cover;
-  object-position: 90% center;
-
-  @media (min-width: $screen-tablet) {
-    object-fit: unset;
-    object-position: unset;
-    height: auto;
+    margin-top: 20px;
+    display: block;
+    width: 220px;
+    max-width: 100%;
+    height: 2px;
+   background-color: $color-primary; 
   }
 }
 
 .infrastructure__point {
   margin-bottom: 10px;
+
+  &:last-child {
+    margin-bottom: 0px;
+  }
 }
+
+// .infrastructure__list {
+//   padding: 0px;
+
+//   @media (min-width: $screen-tablet) {
+//     display: flex;
+//     flex-wrap: wrap;
+//     justify-content: space-between;
+//   }
+
+//   @media (min-width: $screen-pc) {
+//     justify-content: space-around;
+//   }
+// }
+
+// .infrastructure__item {
+//   margin: 50px auto 10px;
+//   display: block;
+//   width: 355px;
+//   max-width: 100%;
+//   border: 2px solid transparent;
+//   border-image-slice: 1;
+// }
+
+// .infrastructure__line_left {
+//   border-image: linear-gradient(
+//     100deg,
+//     $color-secondary 0 35%,
+//     transparent 35% 100%
+//   );
+//   border-image-slice: 1;
+// }
+
+// .infrastructure__line_right {
+//   border-image: linear-gradient(
+//     -100deg,
+//     $color-secondary 0 35%,
+//     transparent 35% 100%
+//   );
+//   border-image-slice: 1;
+// }
+
+// .infrastructure__icon {
+//   margin: 0 auto;
+//   width: 120px;
+//   height: 90px;
+//   transform: translateY(-50%);
+//   background-color: $color-primary;
+//   background-position: center;
+//   background-repeat: no-repeat;
+//   box-shadow: -3px 3px rgba(0, 0, 0, 0.35);
+// }
+
+// .infrastructure__icon-man {
+//   background-image: url(/images/infrastructure/man.png);
+// }
+
+// .infrastructure__icon-bus {
+//   background-image: url(/images/infrastructure/bus.png);
+// }
+
+// .infrastructure__content {
+//   padding: 0px 0px 10px 30px;
+//   margin: -15px 0px 20px 0px;
+//   list-style-type: square;
+// }
+
+// .infrastructure__map {
+//   margin: 0 -10px;
+//   position: relative;
+
+//   @media (min-width: $screen-tablet) {
+//     order: 3;
+//     width: 100%;
+//   }
+// }
+
+// .marker {
+//   position: absolute;
+//   top: 50px;
+//   right: 180px;
+
+//   @media (min-width: $screen-tablet) {
+//     top: 0px;
+//     right: 130px;
+//   }
+
+//   @media (min-width: $screen-pc) {
+//     top: 40px;
+//     right: 240px;
+//   }
+// }
+
+// .marker__icon {
+//     margin: 0 auto 4px;
+//     display: block;
+//     width: 30px;
+// }
+
+// .marker__name {
+//     font-weight: 700;
+// }
+
+// .infrastructure__img {
+//   width: 100%;
+//   height: 260px;
+
+//   object-fit: cover;
+//   object-position: 90% center;
+
+//   @media (min-width: $screen-tablet) {
+//     object-fit: unset;
+//     object-position: unset;
+//     height: auto;
+//   }
+// }
+
+// .infrastructure__point {
+//   margin-bottom: 10px;
+// }

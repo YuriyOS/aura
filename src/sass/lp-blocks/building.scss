@@ -1,0 +1,123 @@
+.building__slider {
+    margin: 0 auto;
+    padding-bottom: 30px;
+    width: 355px;
+    max-width: 100%;
+
+  @media (min-width: $screen-tablet) {
+    width: 758px;
+  }
+  @media (min-width: $screen-pc) {
+    width: 1140px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+.building__item {
+  margin: 19px 0px;
+}
+
+.building__img-wrap {
+    padding: 15px;
+    position: relative;
+  &::before {
+    content: '';
+    display: block;
+    width: 16px;
+    height: 50px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-image: url(/images/building/up.png);
+  }
+
+  &::after {
+    content: '';
+    display: block;
+    width: 101px;
+    height: 100px;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    background-image: url(/images/building/triangle.png);
+    z-index: 100;
+  }
+}
+
+.building__img {
+  display: block;
+  width: 325px;
+  max-width: 100%;
+  height: 335px;
+  object-fit: cover;
+  font-size: 0px;
+  border: 4px solid #f8f8f8;
+}
+
+
+.building_dots-style {
+    margin: 0px;
+    padding: 0px;
+    width: 100px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+  }
+
+  .building_dots-style button {
+    width: 11px;
+    height: 11px;
+    font-size: 0px;
+    border: none;
+    border-radius: 50%;
+    background-color: #d7d7d7;
+    outline: none;
+  }
+
+  .building_dots-style li[class='slick-active'] button {
+    background: #e57828;
+  }
+
+  .building__slider .slick-arrow {
+    position: absolute;
+    bottom: 6px;
+    font-size: 0;
+    width: 32px;
+    height: 32px;
+    border: none;
+    background-color: transparent;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .building__slider .slick-arrow.slick-prev {
+    left: 0;
+    background: url('/images/plans/arrows/arrow-left.png') 0 0 / 100% no-repeat;
+  
+    &:focus {
+      outline: none;
+    }
+  
+    // @media (min-width: $screen_tablet) {
+    //   left: 30px;
+    // }
+  }
+
+  .building__slider .slick-arrow.slick-next {
+    right: 0px;
+    background: url('/images/plans/arrows/arrow-right.png') 0 0 / 100% no-repeat;
+  
+    &:focus {
+      outline: none;
+    }
+  
+    // @media (min-width: $screen_tablet) {
+    //   right: 0;
+    // }
+  }

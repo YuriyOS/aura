@@ -1,12 +1,9 @@
 .features {
-  padding-top: 50px;
-  // background-color: $color-primary;
   background-color: #f8f8f8;
 }
 
 .features__title {
-  margin-bottom: 35px;
-  // color: #ffffff;
+  margin-bottom: 30px;
 }
 
 .features__list {
@@ -22,7 +19,7 @@
 }
 
 .features__item {
-  margin: 0 auto 25px;
+  margin: 0 auto;
   display: block;
   width: 355px;
   max-width: 100%;

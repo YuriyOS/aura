@@ -12,11 +12,26 @@ $(function () {
     $('.navigation__overlay').addClass('navigation__overlay_visible');
     $('body').addClass('body_fixed');
   });
-  $('.js-menu-btn_hide, .js-navigation__overlay').on('click', function () {
+  "";
+
+  function hideMenu() {
     $('.navigation').removeClass('navigation_visible');
     $('.navigation__overlay').removeClass('navigation__overlay_visible');
     $('body').removeClass('body_fixed');
+  }
+
+  $('.js-menu-btn_hide, .js-navigation__overlay').on('click', function () {
+    hideMenu();
   }); // Mobile Menu End
+  // Animation Scroll
+
+  $('.navigation__link').on('click', function (e) {
+    e.preventDefault();
+    hideMenu();
+    $('html, body').animate({
+      scrollTop: $($(this).attr('href')).offset().top - $('.header').height()
+    }, 1500);
+  }); // Animation Scroll End
   // Site Sliders
 
   $('.viewing__slider').slick({
@@ -26,7 +41,7 @@ $(function () {
     dotsClass: 'viewing_dots-style',
     responsive: [{
       breakpoint: 10000,
-      settings: "unslick"
+      settings: 'unslick'
     }, {
       breakpoint: 1144,
       settings: {
@@ -86,7 +101,7 @@ $(function () {
     dotsClass: 'building_dots-style',
     responsive: [{
       breakpoint: 10000,
-      settings: "unslick"
+      settings: 'unslick'
     }, {
       breakpoint: 1144,
       settings: {
@@ -111,7 +126,7 @@ $(function () {
     // slidesToScroll: 5,
     responsive: [{
       breakpoint: 10000,
-      settings: "unslick"
+      settings: 'unslick'
     }, {
       breakpoint: 1144,
       settings: {
@@ -161,13 +176,13 @@ $(function () {
       $('body').removeClass('body_fixed');
     });
   });
-  $(".modal__form").submit(function (e) {
+  $('.modal__form').submit(function (e) {
     //Change
     console.log('sagdgd');
     e.preventDefault();
     var th = $(this);
     $.ajax({
-      type: "POST",
+      type: 'POST',
       url: 'mail.php',
       // data: data,
       // dataType: 'json',
@@ -175,7 +190,7 @@ $(function () {
         console.log('Success');
       },
       error: function error(xhr, ajaxOptions, thrownError) {
-        console.log(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
+        console.log(thrownError + '\r\n' + xhr.statusText + '\r\n' + xhr.responseText);
       }
     });
     return false;

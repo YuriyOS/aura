@@ -38,6 +38,34 @@ $(function () {
   });
   // Animation Scroll End
 
+  // Thank You Form
+  function showSuccessContent() {
+    $('.js-modal-content').html("<h3>Супер! </h3> <p>Найближчим часом наш провідний фахівець Олена зв'яжется з Вами. ЖК Аура бажає Вам гарного настрою!</p> ");
+    $('.modal__footer').remove();
+  }
+
+  function formSubmit() {
+    $('.js-form-apply').on('submit', function (e) {
+      e.preventDefault();
+      $.ajax({
+        type: 'GET',
+        url: '',
+        // data: data,
+        // dataType: 'json',
+        success: function () {
+          showSuccessContent();
+        },
+        error: function (xhr, ajaxOptions, thrownError) {
+          console.log(
+            thrownError + '\r\n' + xhr.statusText + '\r\n' + xhr.responseText,
+          );
+        },
+      });
+    });
+  }
+
+  // Thank You Form End
+
   // Site Sliders
 
   $('.viewing__slider').slick({
@@ -185,17 +213,19 @@ $(function () {
     },
   });
 
-  function createModal(sTitle = 'Заполните форму') {
+  function createModal(sTitle = '') {
     $('body').prepend(
       '' +
         '<div class="modal">\n' +
         '    <div class="modal__dialog">\n' +
         '        <div class="modal__body">\n' +
         '        <div class="btn-close"></div>\n' +
-        '        <h2 class="form__title h2">' +
+        '        <div class="js-modal-content">\n' +
+
+        '        <h3 class="form__title">Заповніть форму нижче! <br> Ми звяжемося з Вами, відповімо на всі питання та підберемо зручний час перегляду.</h3>' +    
         sTitle +
         '</h2>\n' +
-        '        <form class="form modal__form">        \n' +
+        '        <form class="form modal__form js-form-apply">        \n' +
         '            <input class="input modal__input main-text" type="text" name="Name" placeholder="Ваше имя..." required><br>\n' +
         // '            <input class="input modal__input main-text" type="text" name="E-mail" placeholder="Ваше E-mail..." required><br>\n' +
         '            <input class="input modal__input main-text" type="text" name="Phone" placeholder="Ваш телефон..."><br>\n' +
@@ -203,6 +233,7 @@ $(function () {
         sTitle +
         '</button>\n' +
         '        </form>\n' +
+        '        </div>\n' +
         '        </div>\n' +
         '        <div class="modal__footer">\n' +
         '        <p class="modal__footnote main-text_white">Ваші дані в цілковитій безпеці і ніколи НЕ будуть передані 3-м особам.</p>\n' +
@@ -235,27 +266,29 @@ $(function () {
       $('.modal').remove();
       $('body').removeClass('body_fixed');
     });
+
+    formSubmit()
   });
 
-  $('.modal__form').submit(function (e) {
-    //Change
-    console.log('sagdgd');
-    e.preventDefault();
-    var th = $(this);
-    $.ajax({
-      type: 'POST',
-      url: 'mail.php',
-      // data: data,
-      // dataType: 'json',
-      success: function () {
-        console.log('Success');
-      },
-      error: function (xhr, ajaxOptions, thrownError) {
-        console.log(
-          thrownError + '\r\n' + xhr.statusText + '\r\n' + xhr.responseText,
-        );
-      },
-    });
-    return false;
-  });
+  // $('.modal__form').submit(function (e) {
+  //   //Change
+  //   console.log('sagdgd');
+  //   e.preventDefault();
+  //   var th = $(this);
+  //   $.ajax({
+  //     type: 'POST',
+  //     url: 'mail.php',
+  //     // data: data,
+  //     // dataType: 'json',
+  //     success: function () {
+  //       console.log('Success');
+  //     },
+  //     error: function (xhr, ajaxOptions, thrownError) {
+  //       console.log(
+  //         thrownError + '\r\n' + xhr.statusText + '\r\n' + xhr.responseText,
+  //       );
+  //     },
+  //   });
+  //   return false;
+  // });
 });

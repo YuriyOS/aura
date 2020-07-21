@@ -1,3 +1,11 @@
+.viewing {
+  padding-bottom: 80px;
+  
+  @media (min-width: $screen-pc) {
+    padding-bottom: 50px;
+  }
+}
+
 .viewing__slider {
   margin: 0 auto;
   width: 355px;
@@ -25,9 +33,9 @@
   &::after {
     content: '';
     display: block;
-    width: 34px;
-    height: 39px;
-    background-image: url(/images/view/triangle.png);
+    width: 96px;
+    height: 20px;
+    background-image: url(/images/view/triangle-line.png);
     background-repeat: no-repeat;
   }
 }
@@ -37,7 +45,6 @@
     margin: 0px 10px;
   }
 }
-
 
 .viewing__slider .plans_dots-style {
   width: 150px;
@@ -81,8 +88,8 @@
   position: absolute;
   bottom: -56px;
   font-size: 0;
-  width: 17px;
-  height: 36px;
+  width: 32px;
+  height: 32px;
   border: none;
   background-color: transparent;
   background-position: center;
@@ -114,19 +121,6 @@
     right: 0;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // .viewing {
 //   padding: 30px 0px 76px;

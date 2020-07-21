@@ -188,6 +188,23 @@
   }
 }
 
+.navigation__item {
+  margin-bottom: 15px;
+  text-align: center;
+
+  &:last-child {
+    margin-bottom: 0px;
+  }
+  @media (min-width: $screen-pc) {
+    margin-bottom: 0px;
+  }
+
+}
+
 .navigation__link {
   color: #ffffff;
+
+  @media (min-width: $screen-pc) {
+    font-size: 16px;
+  }
 }

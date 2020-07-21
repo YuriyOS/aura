@@ -1,6 +1,7 @@
 //= ../../node_modules/jquery/dist/jquery.min.js
 //= ../../node_modules/slick-carousel/slick/slick.min.js
 //= ../../node_modules/slick-lightbox/dist/slick-lightbox.min.js
+//=../../form/www/templates/modules/mail/js/mail.js
 
 $(function () {
   // Mobile Menu
@@ -223,8 +224,8 @@ $(function () {
         '        <div class="js-modal-content">\n' +
 
         '        <h3 class="form__title">Заповніть форму нижче! <br> Ми звяжемося з Вами, відповімо на всі питання та підберемо зручний час перегляду.</h3>' +    
-        sTitle +
-        '</h2>\n' +
+        // sTitle +
+        // '</h2>\n' +
         '        <form class="form modal__form js-form-apply">        \n' +
         '            <input class="input modal__input main-text" type="text" name="Name" placeholder="Ваше имя..." required><br>\n' +
         // '            <input class="input modal__input main-text" type="text" name="E-mail" placeholder="Ваше E-mail..." required><br>\n' +

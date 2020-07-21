@@ -189,7 +189,7 @@
 }
 
 .navigation__item {
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   text-align: center;
 
   &:last-child {
@@ -203,6 +203,7 @@
 
 .navigation__link {
   color: #ffffff;
+  font-size: 22px;
 
   @media (min-width: $screen-pc) {
     font-size: 16px;

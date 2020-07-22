@@ -1,8 +1,8 @@
 .viewing {
   padding-bottom: 80px;
-  
+
   @media (min-width: $screen-pc) {
-    padding-bottom: 50px;
+    padding-bottom: 80px;
   }
 }
 
@@ -16,9 +16,6 @@
   }
   @media (min-width: $screen-pc) {
     width: 100%;
-    // display: flex;
-    // flex-wrap: nowrap;
-    // justify-content: space-between;
   }
 }
 
@@ -38,20 +35,18 @@
     height: 20px;
     background-image: url(/images/view/triangle-line.png);
     background-repeat: no-repeat;
+
+    @media (min-width: $screen-pc) {
+      margin-right: 30px;
+    }
   }
 }
-
-
 
 .viewing__item {
   width: 355px;
   max-width: 100%;
   &:focus {
     outline: none;
-  }
-
-  @media (min-width: $screen-pc) {
-    // margin: 0px 10px;
   }
 }
 
@@ -81,6 +76,7 @@
   width: 11px;
   height: 11px;
   font-size: 0px;
+  cursor: pointer;
   border: none;
   border-radius: 50%;
   background-color: #d7d7d7;
@@ -91,14 +87,13 @@
   background: #e57828;
 }
 
-/* Стилизация стрелок */
-
 .viewing__slider .slick-arrow {
   position: absolute;
   bottom: -56px;
   font-size: 0;
   width: 32px;
   height: 32px;
+  cursor: pointer;
   border: none;
   background-color: transparent;
   background-position: center;
@@ -114,12 +109,12 @@
   }
 
   @media (min-width: $screen_tablet) {
-    left: 30px;
+    left: 30%;
   }
 }
 
 .viewing__slider .slick-arrow.slick-next {
-  right: 10px;
+  right: 0;
   background: url('/images/plans/arrows/arrow-right.png') 0 0 / 100% no-repeat;
 
   &:focus {
@@ -127,169 +122,6 @@
   }
 
   @media (min-width: $screen_tablet) {
-    right: 0;
+    right: 30%;
   }
 }
-
-// .viewing {
-//   padding: 30px 0px 76px;
-//   position: relative;
-
-//   @media (min-width: $screen-tablet) {
-//     padding: 50px 0px 96px;
-//   }
-
-//   @media (min-width: $screen-pc) {
-//     padding: 50px 0px 25px;
-
-//   }
-// }
-
-// .viewing__title {
-//   margin-bottom: 30px;
-
-//   @media (min-width: $screen-tablet) {
-//   margin-bottom: 50px;
-//   }
-// }
-
-// .viewing__slider {
-//   margin: 0 auto;
-//   width: 355px;
-//   max-width: 100%;
-
-//   @media (min-width: $screen-tablet) {
-//     width: 748px;
-//   }
-//   @media (min-width: $screen-pc) {
-//     width: 100%;
-//     display: flex;
-//     flex-wrap: nowrap;
-//     justify-content: space-between;
-//   }
-
-// }
-
-// .viewing__item {
-//   width: 355px;
-//   position: relative;
-
-//   @media (min-width: $screen-pc) {
-//     margin: 0px 5px;
-//     width: 260px;
-//     max-width: 100%;
-//   }
-// }
-
-// .viewing__caption {
-//   padding: 0px 88px 0px 10px;
-//   display: flex;
-//   align-items: flex-end;
-//   justify-content: space-between;
-//   width: 100%;
-//   height: 162px;
-//   position: absolute;
-//   left: 0;
-//   bottom: 0;
-//   background-image: url(/images/view/view-bg.png);
-//   background-repeat: no-repeat;
-// }
-
-// .viewing__caption-text {
-//   padding-right: 10px;
-//   margin-bottom: 30px;
-//   font-family: 'Raleway', sans-serif;
-//   font-size: 20px;
-//   font-weight: 700;
-// }
-
-// .viewing__caption-number {
-// margin: 0px;
-// font-family: 'Roboto', sans-serif;
-// font-size: 80px;
-// line-height: 56px;
-// font-weight: 900;
-// color: #ffffff;
-// }
-
-// .viewing__slider .plans_dots-style {
-//   width: 150px;
-// }
-
-// .viewing__img {
-//   width: 355px;
-//   max-width: 100%;
-// }
-
-// .viewing_dots-style {
-//   margin: 0px;
-//   padding: 0px;
-//   width: 100px;
-//   position: absolute;
-//   left: 50%;
-//   transform: translateX(-50%);
-//   bottom: -43px;
-//   display: flex;
-//   justify-content: space-between;
-//   list-style: none;
-// }
-
-// .viewing_dots-style button {
-//   width: 11px;
-//   height: 11px;
-//   font-size: 0px;
-//   border: none;
-//   border-radius: 50%;
-//   background-color: #d7d7d7;
-//   outline: none;
-// }
-
-// .viewing_dots-style li[class='slick-active'] button {
-//   background: #e57828;
-// }
-
-// /* Стилизация стрелок */
-
-// .viewing__slider .slick-arrow {
-//   position: absolute;
-//   bottom: -56px;
-//   font-size: 0;
-//   width: 17px;
-//   height: 36px;
-//   border: none;
-//   background-color: transparent;
-//   background-position: center;
-//   background-repeat: no-repeat;
-// }
-
-// .viewing__slider .slick-arrow.slick-prev {
-//   left: 0;
-//   background: url('/images/plans/arrows/arrow-left.png') 0 0 / 100% no-repeat;
-
-//   &:focus {
-//     outline: none;
-//   }
-
-//   @media (min-width: $screen_tablet) {
-//     left: 30px;
-//   }
-// }
-
-// .viewing__slider .slick-arrow.slick-next {
-//   right: 10px;
-//   background: url('/images/plans/arrows/arrow-right.png') 0 0 / 100% no-repeat;
-
-//   &:focus {
-//     outline: none;
-//   }
-
-//   @media (min-width: $screen_tablet) {
-//     right: 0;
-//   }
-// }
-
-// .text {
-//   margin: 50px auto;
-//   text-align: center;
-//   font-size: 24px;
-// }

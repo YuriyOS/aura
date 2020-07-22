@@ -39,86 +39,23 @@ $(function () {
   });
   // Animation Scroll End
 
-  // Thank You Form
-  function showSuccessContent() {
-    $('.js-modal-content').html(
-      "<h3>Супер! </h3> <p class=\"success-text main-text\">Найближчим часом наш провідний фахівець Олена зв'яжется з Вами. ЖК Аура бажає Вам гарного настрою!</p> ",
-    );
-    $('.modal__footer').remove();
-  }
-
   function formSubmit() {
-
     $('.js-form-apply').validate({
       rules: {
-          name: {
-              required: true,
-              minlength: 2
-          },
-          phone: {
-              required: true,
-              number: true
-          },
+        name: {
+          required: true,
+          minlength: 2,
+        },
+        phone: {
+          required: true,
+          number: true,
+        },
       },
       messages: {
-        name: 'Будь ласка, вкажіть ім\'я!',
-        phone: 'Будь ласка, введіть номер'
+        name: "Будь ласка, вкажіть ім'я!",
+        phone: 'Будь ласка, введіть номер',
       },
-      submitHandler: function(){
-        // $.ajax({
-        //   type: 'POST',
-        //   url: '/form/www/templates/modules/mail/php/sendmail.php',
-        //   success: function () {
-        //     showSuccessContent();
-        //   },
-        //   error: function (xhr, ajaxOptions, thrownError) {
-        //     console.log(
-        //       thrownError + '\r\n' + xhr.statusText + '\r\n' + xhr.responseText,
-        //     );
-        //   },
-        // });
-        var http = new XMLHttpRequest();
-            http.open("POST", '/form/www/templates/modules/mail/php/sendmail.php');
-            http.onreadystatechange = function() {//Call a function when the state changes.
-                if(http.readyState == 4 && http.status == 200) {
-                    var res1 = JSON.parse(http.responseText);
-                    if(res1.error==0){
-                        // $this.innerHTML = '<h2>'+res1.data+'</h2>';
-                        showSuccessContent();
-                    } else {
-                        alert(res1.data);
-                        if($('.g-recaptcha').length){
-                            grecaptcha.reset();
-                        }
-                    }
-                }
-            }
-            http.send(new FormData($this));
-            // http.addEventListener("load", showSuccessContent, false);
-
-            event.preventDefault();
-            return false;
-      }
-  }
-);
-
-    // $('.js-form-apply').on('submit', function (e) {
-    //   e.preventDefault();
-    //   $.ajax({
-    //     type: 'GET',
-    //     url: '',
-    //     // data: data,
-    //     // dataType: 'json',
-    //     success: function () {
-    //       showSuccessContent();
-    //     },
-    //     error: function (xhr, ajaxOptions, thrownError) {
-    //       console.log(
-    //         thrownError + '\r\n' + xhr.statusText + '\r\n' + xhr.responseText,
-    //       );
-    //     },
-    //   });
-    // });
+    });
   }
 
   // Thank You Form End
@@ -132,10 +69,6 @@ $(function () {
     dotsClass: 'viewing_dots-style',
 
     responsive: [
-      // {
-      //   breakpoint: 10000,
-      //   settings: 'unslick',
-      // },
       {
         breakpoint: 10000,
         settings: {
@@ -173,7 +106,6 @@ $(function () {
     arrows: true,
     dots: true,
     dotsClass: 'plans_dots-style',
-    // appendDots: $('.parameters'),
 
     responsive: [
       {
@@ -182,7 +114,6 @@ $(function () {
           slidesToShow: 1,
           slidesToScroll: 1,
           infinite: true,
-          // dots: true
         },
       },
 
@@ -192,7 +123,6 @@ $(function () {
           slidesToShow: 1,
           slidesToScroll: 1,
           infinite: true,
-          // dots: true
         },
       },
       {
@@ -227,7 +157,6 @@ $(function () {
           slidesToShow: 2,
           slidesToScroll: 1,
           infinite: true,
-          // dots: true
         },
       },
       {
@@ -243,9 +172,6 @@ $(function () {
   $('.documents__slider').slick({
     arrows: true,
     dots: false,
-    // settings: "unslick",
-    // slidesToShow: 5,
-    // slidesToScroll: 5,
 
     responsive: [
       {
@@ -258,7 +184,6 @@ $(function () {
           slidesToShow: 2,
           slidesToScroll: 2,
           infinite: true,
-          // dots: true
         },
       },
       {

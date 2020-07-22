@@ -169,41 +169,11 @@ $(function () {
     ],
   });
 
-  $('.documents__slider').slick({
-    arrows: true,
-    dots: false,
-
-    responsive: [
-      {
-        breakpoint: 10000,
-        settings: 'unslick',
-      },
-      {
-        breakpoint: 1144,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          infinite: true,
-        },
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-  });
-
-  $('.documents__slider').slickLightbox({
-    itemSelector: '.doc__link',
+  $('.building__slider').slickLightbox({
+    itemSelector: '.building__link_big-size',
     navigateByKeyboard: true,
-    layouts: {
-      slickPrev:
-        '<span style="position: absolute; top: 100px; right: 10px; color: red;">aww yeah</span>',
-    },
   });
+
 
   function createModal(sFormType = '') {
     $('body').prepend(

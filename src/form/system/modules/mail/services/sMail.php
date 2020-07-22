@@ -19,15 +19,9 @@ class sMail
      * @param $data
      * @return false|string
      */
-    public function getBlockBuffer($data)
+    public function getData($data)
     {
-        ob_start();                                //  Let's start output buffering.
-        echo '<pre>';
-        print_r($data);
-        echo '</pre>';
-        $contents = ob_get_contents();             //  Instead, output above is saved to $contents
-        ob_end_clean();
-        return $contents;
+        return $data;
     }
 
 }

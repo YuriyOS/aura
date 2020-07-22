@@ -16,9 +16,9 @@
   }
   @media (min-width: $screen-pc) {
     width: 100%;
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-between;
+    // display: flex;
+    // flex-wrap: nowrap;
+    // justify-content: space-between;
   }
 }
 
@@ -34,15 +34,24 @@
     content: '';
     display: block;
     width: 96px;
+    max-width: 100%;
     height: 20px;
     background-image: url(/images/view/triangle-line.png);
     background-repeat: no-repeat;
   }
 }
 
+
+
 .viewing__item {
+  width: 355px;
+  max-width: 100%;
+  &:focus {
+    outline: none;
+  }
+
   @media (min-width: $screen-pc) {
-    margin: 0px 10px;
+    // margin: 0px 10px;
   }
 }
 

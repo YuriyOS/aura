@@ -1,17 +1,17 @@
 <?php
 
 //Почта администратора, кому будут приходить письма
-define("_ADMIN_EMAIL_", "yuriy.osenin@gmail.com");
+define("_ADMIN_EMAIL_", "key.idc.m@gmail.com");
 
 /*
  * Настройки почты по умолчанию
  */
 define('_MAIL_TYPE_', 'SMTP');
 define('_SMTP_HOST_', 'mail.adm.tools'); //вставили с UKRAINE
-define('_SMTP_LOGIN_', 'key.idc.m@gmail.com'); // email с которого будут отправлятся письма
-define('_SMTP_PASSWORD_', '@key.idc.m@'); // пароль от почты с которой будут отправлятся письма
-define('_SMTP_SECURE_', 'ssl'); // tls
-define('_SMTP_PORT_', 465);
+define('_SMTP_LOGIN_', 'aura@key-it.tech'); // email с которого будут отправлятся письма
+define('_SMTP_PASSWORD_', '9TvuX9C4euZ2'); // пароль от почты с которой будут отправлятся письма
+define('_SMTP_SECURE_', 'tls'); // tls
+define('_SMTP_PORT_', 587);
 
 /*
  * Настрйоки ReCaptha

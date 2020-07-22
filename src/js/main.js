@@ -1,7 +1,7 @@
 //= ../../node_modules/jquery/dist/jquery.min.js
+//= ../../node_modules/jquery-validation/dist/jquery.validate.js
 //= ../../node_modules/slick-carousel/slick/slick.min.js
 //= ../../node_modules/slick-lightbox/dist/slick-lightbox.min.js
-//=../../form/www/templates/modules/mail/js/mail.js
 
 $(function () {
   // Mobile Menu
@@ -41,28 +41,84 @@ $(function () {
 
   // Thank You Form
   function showSuccessContent() {
-    $('.js-modal-content').html("<h3>Супер! </h3> <p>Найближчим часом наш провідний фахівець Олена зв'яжется з Вами. ЖК Аура бажає Вам гарного настрою!</p> ");
+    $('.js-modal-content').html(
+      "<h3>Супер! </h3> <p class=\"success-text main-text\">Найближчим часом наш провідний фахівець Олена зв'яжется з Вами. ЖК Аура бажає Вам гарного настрою!</p> ",
+    );
     $('.modal__footer').remove();
   }
 
   function formSubmit() {
-    $('.js-form-apply').on('submit', function (e) {
-      e.preventDefault();
-      $.ajax({
-        type: 'GET',
-        url: '',
-        // data: data,
-        // dataType: 'json',
-        success: function () {
-          showSuccessContent();
-        },
-        error: function (xhr, ajaxOptions, thrownError) {
-          console.log(
-            thrownError + '\r\n' + xhr.statusText + '\r\n' + xhr.responseText,
-          );
-        },
-      });
-    });
+
+    $('.js-form-apply').validate({
+      rules: {
+          name: {
+              required: true,
+              minlength: 2
+          },
+          phone: {
+              required: true,
+              number: true
+          },
+      },
+      messages: {
+        name: 'Будь ласка, вкажіть ім\'я!',
+        phone: 'Будь ласка, введіть номер'
+      },
+      submitHandler: function(){
+        // $.ajax({
+        //   type: 'POST',
+        //   url: '/form/www/templates/modules/mail/php/sendmail.php',
+        //   success: function () {
+        //     showSuccessContent();
+        //   },
+        //   error: function (xhr, ajaxOptions, thrownError) {
+        //     console.log(
+        //       thrownError + '\r\n' + xhr.statusText + '\r\n' + xhr.responseText,
+        //     );
+        //   },
+        // });
+        var http = new XMLHttpRequest();
+            http.open("POST", '/form/www/templates/modules/mail/php/sendmail.php');
+            http.onreadystatechange = function() {//Call a function when the state changes.
+                if(http.readyState == 4 && http.status == 200) {
+                    var res1 = JSON.parse(http.responseText);
+                    if(res1.error==0){
+                        // $this.innerHTML = '<h2>'+res1.data+'</h2>';
+                        showSuccessContent();
+                    } else {
+                        alert(res1.data);
+                        if($('.g-recaptcha').length){
+                            grecaptcha.reset();
+                        }
+                    }
+                }
+            }
+            http.send(new FormData($this));
+            // http.addEventListener("load", showSuccessContent, false);
+
+            event.preventDefault();
+            return false;
+      }
+  }
+);
+
+    // $('.js-form-apply').on('submit', function (e) {
+    //   e.preventDefault();
+    //   $.ajax({
+    //     type: 'GET',
+    //     url: '',
+    //     // data: data,
+    //     // dataType: 'json',
+    //     success: function () {
+    //       showSuccessContent();
+    //     },
+    //     error: function (xhr, ajaxOptions, thrownError) {
+    //       console.log(
+    //         thrownError + '\r\n' + xhr.statusText + '\r\n' + xhr.responseText,
+    //       );
+    //     },
+    //   });
+    // });
   }
 
   // Thank You Form End
@@ -76,9 +132,19 @@ $(function () {
     dotsClass: 'viewing_dots-style',
 
     responsive: [
+      // {
+      //   breakpoint: 10000,
+      //   settings: 'unslick',
+      // },
       {
         breakpoint: 10000,
-        settings: 'unslick',
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true,
+          arrows: true,
+        },
       },
       {
         breakpoint: 1144,
@@ -214,7 +280,7 @@ $(function () {
     },
   });
 
-  function createModal(sTitle = '') {
+  function createModal(sFormType = '') {
     $('body').prepend(
       '' +
         '<div class="modal">\n' +
@@ -222,17 +288,14 @@ $(function () {
         '        <div class="modal__body">\n' +
         '        <div class="btn-close"></div>\n' +
         '        <div class="js-modal-content">\n' +
-
-        '        <h3 class="form__title">Заповніть форму нижче! <br> Ми звяжемося з Вами, відповімо на всі питання та підберемо зручний час перегляду.</h3>' +    
-        // sTitle +
-        // '</h2>\n' +
+        '        <h3 class="form__title">Заповніть форму нижче! <br> Ми звяжемося з Вами, відповімо на всі питання та підберемо зручний час перегляду.</h3>' +
         '        <form class="form modal__form js-form-apply">        \n' +
-        '            <input class="input modal__input main-text" type="text" name="Name" placeholder="Ваше имя..." required><br>\n' +
-        // '            <input class="input modal__input main-text" type="text" name="E-mail" placeholder="Ваше E-mail..." required><br>\n' +
-        '            <input class="input modal__input main-text" type="text" name="Phone" placeholder="Ваш телефон..."><br>\n' +
-        '            <button type="submit" class="action-form__btn">' +
-        sTitle +
-        '</button>\n' +
+        '            <input class="input modal__input main-text" type="text" name="name" placeholder="Ваше ім\'я..." required><br>\n' +
+        '            <input class="input modal__input main-text" type="tel" name="phone" placeholder="Ваш телефон..."><br>\n' +
+        '            <input type="hidden" name="form" value="' +
+        sFormType +
+        '">' +
+        '            <button type="submit" class="action-form__btn"> Хочу на перегляд</button>\n' +
         '        </form>\n' +
         '        </div>\n' +
         '        </div>\n' +
@@ -245,7 +308,7 @@ $(function () {
   }
 
   $('.js-action__btn').on('click', function (e) {
-    createModal($(e.target).data('formTitle'));
+    createModal($(e.target).data('formType'));
 
     $('.modal').fadeIn();
     $('body').addClass('body_fixed');
@@ -268,28 +331,6 @@ $(function () {
       $('body').removeClass('body_fixed');
     });
 
-    formSubmit()
+    formSubmit();
   });
-
-  // $('.modal__form').submit(function (e) {
-  //   //Change
-  //   console.log('sagdgd');
-  //   e.preventDefault();
-  //   var th = $(this);
-  //   $.ajax({
-  //     type: 'POST',
-  //     url: 'mail.php',
-  //     // data: data,
-  //     // dataType: 'json',
-  //     success: function () {
-  //       console.log('Success');
-  //     },
-  //     error: function (xhr, ajaxOptions, thrownError) {
-  //       console.log(
-  //         thrownError + '\r\n' + xhr.statusText + '\r\n' + xhr.responseText,
-  //       );
-  //     },
-  //   });
-  //   return false;
-  // });
 });

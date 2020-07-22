@@ -40,11 +40,11 @@ class PHPMail
     {
         $this->smtp_port = $smtp_port;
     }
-    public function setSmtpHost($Host = 'mail.ukraine.com.ua')
+    public function setSmtpHost($Host)
     {
         $this->Host = $Host;
     }
-    public function setSmtpUserName($smtp_username = 'vladimir.gavrilov@webbrigada.ru')
+    public function setSmtpUserName($smtp_username)
     {
         $this->smtp_username = $smtp_username;
     }

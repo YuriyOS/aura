@@ -17,12 +17,6 @@ if(_RECAPTCHA_){
     }
 }
 
-// Проверим поле на пустоту
-if(empty($data['email'])){
-    echo json_encode(['error' => 1, 'data' => 'Введите email']);
-    exit();
-}
-
 //Сохраним файл
 $attachments=[];
 $uploaddir =  __DIR__.'/../../../../../temp/';
@@ -41,9 +35,12 @@ if(!empty($_FILES['file']['tmp_name'])){
 }
 
 $message = '<p>Новое сообщение с формы обратной связи.</p>';
+$message_name = '<p>Имя - ' . \modules\mail\services\sMail::instance()->getData($data['name']) . '</p>';
+$message_number = '<p>Номер телефона - ' . \modules\mail\services\sMail::instance()->getData($data['phone']) . '</p>';
+$message_form = '<p>Форма - ' . \modules\mail\services\sMail::instance()->getData($data['form']) . '</p>';
 
 // Прикрепим все данные из формы
-$message .= \modules\mail\services\sMail::instance()->getBlockBuffer($data);
+$message .= $message_name . $message_number . $message_form;
 
 
 \core\PHPMail::instance()->sendSMTPMail($emailto, 'Новое сообщение с сайта '.$_SERVER['HTTP_HOST'], $message, $attachments);

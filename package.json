@@ -23,7 +23,7 @@
     "@babel/core": "^7.8.4",
     "@babel/preset-env": "^7.8.4",
     "autoprefixer": "^9.7.4",
-    "browser-sync": "^2.26.7",
+    "browser-sync": "^2.26.10",
     "cross-env": "^7.0.0",
     "cssnano": "^4.1.10",
     "del": "^5.1.0",
@@ -51,6 +51,7 @@
   },
   "dependencies": {
     "jquery": "^3.5.1",
+    "jquery-validation": "^1.19.2",
     "slick-carousel": "^1.8.1",
     "slick-lightbox": "^0.2.12"
   }

@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.addEventListener('submit', function(event) {
         var $this = event.target;
 
-        if ($this.classList.contains("SendMail")) {
+        if ($this.classList.contains("js-form-apply")) {
             var http = new XMLHttpRequest();
             http.open("POST", '/form/www/templates/modules/mail/php/sendmail.php');
             http.onreadystatechange = function() {//Call a function when the state changes.
